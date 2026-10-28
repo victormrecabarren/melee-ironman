@@ -1,1 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="shortcut icon" href="/melee-ironman/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><link rel="manifest" href="/melee-ironman/manifest.json"/><title>React App</title><link href="/melee-ironman/static/css/2.22a7d4ef.chunk.css" rel="stylesheet"><link href="/melee-ironman/static/css/main.c0ded8f4.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(f){function e(e){for(var r,n,t=e[0],o=e[1],u=e[2],i=0,l=[];i<t.length;i++)n=t[i],p[n]&&l.push(p[n][0]),p[n]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(f[r]=o[r]);for(s&&s(e);l.length;)l.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var n=c[r],t=!0,o=1;o<n.length;o++){var u=n[o];0!==p[u]&&(t=!1)}t&&(c.splice(r--,1),e=i(i.s=n[0]))}return e}var n={},p={1:0},c=[];function i(e){if(n[e])return n[e].exports;var r=n[e]={i:e,l:!1,exports:{}};return f[e].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.m=f,i.c=n,i.d=function(e,r,n){i.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:n})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(r,e){if(1&e&&(r=i(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(i.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)i.d(n,t,function(e){return r[e]}.bind(null,t));return n},i.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(r,"a",r),r},i.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},i.p="/melee-ironman/";var r=window.webpackJsonp=window.webpackJsonp||[],t=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=t;a()}([])</script><script src="/melee-ironman/static/js/2.c6d22b0a.chunk.js"></script><script src="/melee-ironman/static/js/main.18d60e3a.chunk.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101115" />
+    <meta
+      name="description"
+      content="A quick, local Melee Iron Man tracker. Two players. Every character. One winner."
+    />
+    <title>Iron Man SSBM</title>
+    <link rel="icon" type="image/svg+xml" href="./ironman.svg" />
+    <script type="module" crossorigin src="./assets/index-CvvE0RN8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BkPLwMZG.css">
+  </head>
+  <body>
+    <div id="root"><div style="padding:32px;color:#ededea;background:#101115;font:16px Arial,sans-serif">
+      <h1 style="font-size:22px">Iron Man SSBM</h1><p>Opening your match…</p>
+    </div></div>
+    <script>
+      // This small, dependency-free fallback also works when the app's module
+      // graph cannot load or parse, before React can display an error.
+      var startupTimer, leavingPage = false;
+      function clearStartupError() {
+        clearTimeout(startupTimer);
+        var notice = document.getElementById('startup-error');
+        if (notice) notice.remove();
+      }
+      function showStartupError(message) {
+        if (leavingPage) return;
+        clearTimeout(startupTimer);
+        startupTimer = setTimeout(function () {
+          if (leavingPage) return;
+          clearStartupError();
+          var notice = document.createElement('section');
+          notice.id = 'startup-error'; notice.setAttribute('role', 'alert');
+          notice.style.cssText = 'padding:24px;color:#ededea;background:#101115;font:16px Arial,sans-serif';
+          var heading = document.createElement('h2'); heading.textContent = 'The page could not finish loading';
+          var help = document.createElement('p'); help.textContent = 'Your saved match has not been cleared. Reload to try again.';
+          var detail = document.createElement('p'); detail.textContent = String(message || 'A browser error interrupted the page.');
+          var reload = document.createElement('button'); reload.textContent = 'Reload'; reload.onclick = function () { location.reload(); };
+          notice.append(heading, help, detail, reload); document.body.append(notice);
+        }, 1000);
+      }
+      window.addEventListener('ironman:ready', clearStartupError);
+      window.addEventListener('pagehide', function () { leavingPage = true; clearStartupError(); });
+      window.addEventListener('beforeunload', function () { leavingPage = true; clearStartupError(); });
+      window.addEventListener('pageshow', function () { leavingPage = false; });
+      window.addEventListener('error', function (event) {
+        if (event.message) showStartupError(event.message);
+        else if (event.target && event.target.tagName === 'SCRIPT') showStartupError('The application code could not be downloaded.');
+      }, true);
+      window.addEventListener('unhandledrejection', function (event) {
+        if (event.reason && event.reason.name === 'AbortError') return;
+        showStartupError(event.reason && event.reason.message || event.reason);
+      });
+    </script>
+  </body>
+</html>
