@@ -686,12 +686,15 @@ export default function App() {
     <div className="match-actions">
       <button className="start-over" disabled={!assets || adjusting} onClick={startOver}>Start Over</button>
     </div>
-      <footer className="preview-footer"><p>Original Melee models, animations, effects, and sounds. Camera follows the fighters within Final Destination’s original bounds.<br />Each character has two stocks. Losing both brings in the next character. This match is saved on this browser and resumes when you return.</p>
+      <footer className="preview-footer">
+      <div className="preview-preferences">
       <label><input type="checkbox" checked={sound} onChange={event => {
         setSound(event.target.checked);
         if (audio.current) audio.current.gain.gain.value = event.target.checked ? .5 : 0;
       }} /> Sound</label>
       <label><input type="checkbox" checked={reduced} onChange={event => setReduced(event.target.checked)} /> Reduce motion</label>
+      </div>
+      <p>Original Melee models, animations, effects, and sounds.</p>
     </footer>
   </main>;
 }
