@@ -1,0 +1,40 @@
+{
+  "falco": {
+    "referenceContactFrames": [
+      49,
+      50,
+      51,
+      52
+    ],
+    "findings": "Yellow, red, blue, green contact progression. Previous mesh-only model10 export had zero RGB; replaced with original emitter tracks and particle textures."
+  },
+  "iceClimbers": {
+    "referenceContactFrames": [
+      17,
+      23
+    ],
+    "previewContactFrames": [
+      14,
+      20
+    ],
+    "contactGapFrames": 6,
+    "independentAttackerHitstop": true,
+    "note": "Reference-calibrated controlled pair; not independent Nana AI/percent. Both original models and source motion/effect clips used."
+  },
+  "zelda": {
+    "fix": "Early hits hold the first visible recoil sample, then advance outside hitstop; final hit switches to DamageFlyN."
+  },
+  "roster": {
+    "characters": 26,
+    "facingExports": 52,
+    "nanaExports": 2,
+    "note": "All selectable; held items, some character-specific effects, accessory dynamics and full engine behavior remain separate fidelity gaps."
+  },
+  "performance": {
+    "nessIdleMiBBefore": 210,
+    "nessIdleMiBAfter": 7.6328125,
+    "effectsMiBBefore": 380.46,
+    "effectsMiBAfter": 74.0859375,
+    "device": "Mac in-app browser with mobile viewport, not measured on iPhone"
+  }
+}

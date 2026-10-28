@@ -1,0 +1,326 @@
+{
+  "dr-mario": {
+    "source": "PlDr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1
+  },
+  "roy": {
+    "source": "PlFe.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0800000429153442,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "roy-left": {
+    "source": "PlFe.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0800000429153442,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "dr-mario-left": {
+    "source": "PlDr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "luigi": {
+    "source": "PlLg.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.25,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "luigi-left": {
+    "source": "PlLg.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.25,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "mario": {
+    "source": "PlMr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "mario-left": {
+    "source": "PlMr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "marth-left": {
+    "source": "PlMs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "yoshi": {
+    "source": "PlYs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0499999523162842,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "yoshi-left": {
+    "source": "PlYs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0499999523162842,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "captain-falcon": {
+    "source": "PlCa.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9700000286102295,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "captain-falcon-left": {
+    "source": "PlCa.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9700000286102295,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "donkey-kong": {
+    "source": "PlDk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "donkey-kong-left": {
+    "source": "PlDk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166666666666667
+  },
+  "peach": {
+    "source": "PlPe.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "peach-left": {
+    "source": "PlPe.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "falco": {
+    "source": "PlFc.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "ganondorf": {
+    "source": "PlGn.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0800000429153442,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "falco-left": {
+    "source": "PlFc.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.100000023841858,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "fox": {
+    "source": "PlFx.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9599999785423279,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "fox-left": {
+    "source": "PlFx.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9599999785423279,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "ganondorf-left": {
+    "source": "PlGn.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0800000429153442,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "kirby": {
+    "source": "PlKb.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9200000166893005,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "bowser": {
+    "source": "PlKp.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.6899999976158142,
+    "exportCameraCompensation": 1.9583332538604736
+  },
+  "kirby-left": {
+    "source": "PlKb.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9200000166893005,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "bowser-left": {
+    "source": "PlKp.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.6899999976158142,
+    "exportCameraCompensation": 1.9583332538604736
+  },
+  "ice-climbers": {
+    "source": "PlPp.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "ice-climbers-left": {
+    "source": "PlPp.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "samus": {
+    "source": "PlSs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.8799999952316284,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "samus-left": {
+    "source": "PlSs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.8799999952316284,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "nana": {
+    "source": "PlNn.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "nana-left": {
+    "source": "PlNn.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "link": {
+    "source": "PlLk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.2200000286102295,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "link-left": {
+    "source": "PlLk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.2200000286102295,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "ness": {
+    "source": "PlNs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "ness-left": {
+    "source": "PlNs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "sheik": {
+    "source": "PlSk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.399999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "sheik-left": {
+    "source": "PlSk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.399999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "zelda": {
+    "source": "PlZd.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.2599999904632568,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "zelda-left": {
+    "source": "PlZd.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.2599999904632568,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "young-link": {
+    "source": "PlCl.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9599999785423279,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "young-link-left": {
+    "source": "PlCl.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9599999785423279,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "mr-game-and-watch": {
+    "source": "PlGw.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0199999809265137,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "mr-game-and-watch-left": {
+    "source": "PlGw.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0199999809265137,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "marth": {
+    "source": "PlMs.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.149999976158142,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "mewtwo": {
+    "source": "PlMt.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "mewtwo-left": {
+    "source": "PlMt.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 1.0,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "pichu": {
+    "source": "PlPc.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.5,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "pichu-left": {
+    "source": "PlPc.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.5,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "pikachu": {
+    "source": "PlPk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.8999999761581421,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "pikachu-left": {
+    "source": "PlPk.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.8999999761581421,
+    "exportCameraCompensation": 1.4166667064030967
+  },
+  "jigglypuff": {
+    "source": "PlPr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9399999976158142,
+    "exportCameraCompensation": 1.62500003973643
+  },
+  "jigglypuff-left": {
+    "source": "PlPr.dat",
+    "commonAttributeOffset": "0x8C",
+    "modelScale": 0.9399999976158142,
+    "exportCameraCompensation": 1.62500003973643
+  }
+}

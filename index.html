@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101115" />
+    <meta
+      name="description"
+      content="A quick, local Melee Iron Man tracker. Two players. Every character. One winner."
+    />
+    <title>Iron Man SSBM</title>
+    <link rel="icon" type="image/svg+xml" href="./ironman.svg" />
+  </head>
+  <body>
+    <div id="root"><div style="padding:32px;color:#ededea;background:#101115;font:16px Arial,sans-serif">
+      <h1 style="font-size:22px">Iron Man SSBM</h1><p>Opening your match…</p>
+    </div></div>
+    <script>
+      // This small, dependency-free fallback also works when the app's module
+      // graph cannot load or parse, before React can display an error.
+      var startupTimer, leavingPage = false;
+      function clearStartupError() {
+        clearTimeout(startupTimer);
+        var notice = document.getElementById('startup-error');
+        if (notice) notice.remove();
+      }
+      function showStartupError(message) {
+        if (leavingPage) return;
+        clearTimeout(startupTimer);
+        startupTimer = setTimeout(function () {
+          if (leavingPage) return;
+          clearStartupError();
+          var notice = document.createElement('section');
+          notice.id = 'startup-error'; notice.setAttribute('role', 'alert');
+          notice.style.cssText = 'padding:24px;color:#ededea;background:#101115;font:16px Arial,sans-serif';
+          var heading = document.createElement('h2'); heading.textContent = 'The page could not finish loading';
+          var help = document.createElement('p'); help.textContent = 'Your saved match has not been cleared. Reload to try again.';
+          var detail = document.createElement('p'); detail.textContent = String(message || 'A browser error interrupted the page.');
+          var reload = document.createElement('button'); reload.textContent = 'Reload'; reload.onclick = function () { location.reload(); };
+          notice.append(heading, help, detail, reload); document.body.append(notice);
+        }, 1000);
+      }
+      window.addEventListener('ironman:ready', clearStartupError);
+      window.addEventListener('pagehide', function () { leavingPage = true; clearStartupError(); });
+      window.addEventListener('beforeunload', function () { leavingPage = true; clearStartupError(); });
+      window.addEventListener('pageshow', function () { leavingPage = false; });
+      window.addEventListener('error', function (event) {
+        if (event.message) showStartupError(event.message);
+        else if (event.target && event.target.tagName === 'SCRIPT') showStartupError('The application code could not be downloaded.');
+      }, true);
+      window.addEventListener('unhandledrejection', function (event) {
+        if (event.reason && event.reason.name === 'AbortError') return;
+        showStartupError(event.reason && event.reason.message || event.reason);
+      });
+    </script>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>

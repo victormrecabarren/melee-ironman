@@ -1,0 +1,1107 @@
+{
+  "source": "https://github.com/visgotti/melee-blender/tree/master/hsd-export/app/HSDRawViewer/Scripts",
+  "commands": {
+    "0": {
+      "name": "End Of Script",
+      "fields": []
+    },
+    "1": {
+      "name": "Synchronous Timer",
+      "fields": [
+        [
+          "Frame",
+          26,
+          false
+        ]
+      ]
+    },
+    "2": {
+      "name": "Asynchronous Timer",
+      "fields": [
+        [
+          "Frame",
+          26,
+          false
+        ]
+      ]
+    },
+    "3": {
+      "name": "Set Loop",
+      "fields": [
+        [
+          "Count",
+          26,
+          false
+        ]
+      ]
+    },
+    "4": {
+      "name": "Execute Loop",
+      "fields": []
+    },
+    "5": {
+      "name": "Subroutine",
+      "fields": [
+        [
+          "Target",
+          26,
+          false
+        ],
+        [
+          "Pointer",
+          32,
+          false
+        ]
+      ]
+    },
+    "6": {
+      "name": "Return",
+      "fields": []
+    },
+    "7": {
+      "name": "Go To",
+      "fields": [
+        [
+          "Target",
+          26,
+          false
+        ],
+        [
+          "Pointer",
+          32,
+          false
+        ]
+      ]
+    },
+    "8": {
+      "name": "Set Timer Animation",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "9": {
+      "name": "Unknown0x09",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "10": {
+      "name": "Graphic Effect",
+      "fields": [
+        [
+          "Bone ID",
+          8,
+          false
+        ],
+        [
+          "Use Common Bone IDs",
+          1,
+          false
+        ],
+        [
+          "Destroy on State Change",
+          1,
+          false
+        ],
+        [
+          "Unk1",
+          16,
+          false
+        ],
+        [
+          "GFX ID",
+          16,
+          false
+        ],
+        [
+          "Unk2",
+          16,
+          false
+        ],
+        [
+          "Z",
+          16,
+          true
+        ],
+        [
+          "Y",
+          16,
+          true
+        ],
+        [
+          "X",
+          16,
+          true
+        ],
+        [
+          "Range Z",
+          16,
+          true
+        ],
+        [
+          "Range Y",
+          16,
+          true
+        ],
+        [
+          "Range X",
+          16,
+          true
+        ]
+      ]
+    },
+    "11": {
+      "name": "Create Hitbox",
+      "fields": [
+        [
+          "ID",
+          3,
+          false
+        ],
+        [
+          "Hit Group",
+          3,
+          false
+        ],
+        [
+          "Only Hit Grabbed Fighter (bugged)",
+          1,
+          false
+        ],
+        [
+          "Bone",
+          8,
+          false
+        ],
+        [
+          "Use Common Bone IDs",
+          1,
+          false
+        ],
+        [
+          "Damage",
+          10,
+          false
+        ],
+        [
+          "Size",
+          16,
+          false
+        ],
+        [
+          "Z-Offset",
+          16,
+          true
+        ],
+        [
+          "Y-Offset",
+          16,
+          true
+        ],
+        [
+          "X-Offset",
+          16,
+          true
+        ],
+        [
+          "Angle",
+          9,
+          false
+        ],
+        [
+          "Knockback Growth",
+          9,
+          false
+        ],
+        [
+          "Weight Set Knockback",
+          9,
+          false
+        ],
+        [
+          "Item Hit Interaction",
+          1,
+          false
+        ],
+        [
+          "Ignore Thrown Fighters",
+          1,
+          false
+        ],
+        [
+          "Ignore Fighter Scale",
+          1,
+          false
+        ],
+        [
+          "Clank",
+          1,
+          false
+        ],
+        [
+          "Rebound",
+          1,
+          false
+        ],
+        [
+          "Base Knockback",
+          9,
+          false
+        ],
+        [
+          "Element",
+          5,
+          false
+        ],
+        [
+          "Shield Damage",
+          8,
+          true
+        ],
+        [
+          "Hit SFX Severity",
+          3,
+          false
+        ],
+        [
+          "Hit SFX Kind",
+          5,
+          false
+        ],
+        [
+          "Hit Grounded Fighters",
+          1,
+          false
+        ],
+        [
+          "Hit Aerial Fighters",
+          1,
+          false
+        ]
+      ]
+    },
+    "12": {
+      "name": "Adjust Hitbox Damage",
+      "fields": [
+        [
+          "Hitbox ID",
+          3,
+          false
+        ],
+        [
+          "Damage",
+          23,
+          false
+        ]
+      ]
+    },
+    "13": {
+      "name": "Adjust Hitbox Size",
+      "fields": [
+        [
+          "Hitbox ID",
+          3,
+          false
+        ],
+        [
+          "Size",
+          23,
+          false
+        ]
+      ]
+    },
+    "14": {
+      "name": "Set Hitbox Interaction",
+      "fields": [
+        [
+          "Hitbox ID",
+          24,
+          false
+        ],
+        [
+          "Type",
+          1,
+          false
+        ],
+        [
+          "Value",
+          1,
+          false
+        ]
+      ]
+    },
+    "15": {
+      "name": "Remove Hitbox",
+      "fields": [
+        [
+          "Index",
+          26,
+          false
+        ]
+      ]
+    },
+    "16": {
+      "name": "Clear Hitboxes",
+      "fields": [
+        [
+          "None",
+          26,
+          false
+        ]
+      ]
+    },
+    "17": {
+      "name": "Sound Effect",
+      "fields": [
+        [
+          "Behavior",
+          8,
+          false
+        ],
+        [
+          "Unknown",
+          18,
+          false
+        ],
+        [
+          "SFX ID",
+          32,
+          false
+        ],
+        [
+          "Padding",
+          16,
+          false
+        ],
+        [
+          "Volume",
+          8,
+          false
+        ],
+        [
+          "Panning",
+          8,
+          false
+        ]
+      ]
+    },
+    "18": {
+      "name": "Random Smash SFX",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "19": {
+      "name": "Set Flag",
+      "fields": [
+        [
+          "Flag",
+          2,
+          false
+        ],
+        [
+          "Value",
+          24,
+          false
+        ]
+      ]
+    },
+    "20": {
+      "name": "Reverse Direction",
+      "fields": [
+        [
+          "Enabled",
+          26,
+          false
+        ]
+      ]
+    },
+    "21": {
+      "name": "Set flag 0x2210 to 10",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "22": {
+      "name": "Set flag 0x2210 to 20",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "23": {
+      "name": "Allow Interrupt",
+      "fields": [
+        [
+          "None",
+          26,
+          false
+        ]
+      ]
+    },
+    "24": {
+      "name": "Projectile Flag",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "25": {
+      "name": "Set Jump State",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "26": {
+      "name": "Set Body Collision State",
+      "fields": [
+        [
+          "Body State",
+          26,
+          false
+        ]
+      ]
+    },
+    "27": {
+      "name": "Set All Bone Collision States",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "28": {
+      "name": "Set Bone Collision State",
+      "fields": [
+        [
+          "Bone Id",
+          8,
+          false
+        ],
+        [
+          "Collision State",
+          18,
+          false
+        ]
+      ]
+    },
+    "29": {
+      "name": "Enable Jab Followup",
+      "fields": [
+        [
+          "Toggle",
+          26,
+          false
+        ]
+      ]
+    },
+    "30": {
+      "name": "Set Rapid Jab Flag",
+      "fields": [
+        [
+          "Value",
+          26,
+          false
+        ]
+      ]
+    },
+    "31": {
+      "name": "Change Model State",
+      "fields": [
+        [
+          "Struct ID",
+          7,
+          false
+        ],
+        [
+          "ExtraBitNonsense",
+          1,
+          false
+        ],
+        [
+          "Object ID",
+          18,
+          true
+        ]
+      ]
+    },
+    "32": {
+      "name": "Revert Models",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "33": {
+      "name": "Remove Models",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "34": {
+      "name": "Throw",
+      "fields": [
+        [
+          "Throw Type",
+          3,
+          false
+        ],
+        [
+          "Damage",
+          23,
+          false
+        ],
+        [
+          "Angle",
+          9,
+          false
+        ],
+        [
+          "Knockback Growth",
+          9,
+          false
+        ],
+        [
+          "Weight Knockback",
+          9,
+          false
+        ],
+        [
+          "Unused",
+          5,
+          false
+        ],
+        [
+          "Base Knockback",
+          9,
+          false
+        ],
+        [
+          "Element",
+          4,
+          false
+        ],
+        [
+          "Hit SFX Severity",
+          3,
+          false
+        ],
+        [
+          "Hit SFX Kind",
+          4,
+          false
+        ],
+        [
+          "Unused",
+          12,
+          false
+        ]
+      ]
+    },
+    "35": {
+      "name": "Held Item Invisibility",
+      "fields": [
+        [
+          "Flag",
+          26,
+          false
+        ]
+      ]
+    },
+    "36": {
+      "name": "Body Article Invisibility",
+      "fields": [
+        [
+          "Unknown",
+          25,
+          false
+        ],
+        [
+          "Flag",
+          1,
+          false
+        ]
+      ]
+    },
+    "37": {
+      "name": "Character Invisibility",
+      "fields": [
+        [
+          "Unknown",
+          25,
+          false
+        ],
+        [
+          "Flag",
+          1,
+          false
+        ]
+      ]
+    },
+    "38": {
+      "name": "Pseudo Random Sound Effect",
+      "fields": [
+        [
+          "Unknown1",
+          26,
+          false
+        ],
+        [
+          "SFX ID 1",
+          32,
+          false
+        ],
+        [
+          "SFX ID 2",
+          32,
+          false
+        ],
+        [
+          "SFX ID 3",
+          32,
+          false
+        ],
+        [
+          "SFX ID 4",
+          32,
+          false
+        ],
+        [
+          "SFX ID 5",
+          32,
+          false
+        ],
+        [
+          "SFX ID 6",
+          32,
+          false
+        ]
+      ]
+    },
+    "39": {
+      "name": "Unknown0x27",
+      "fields": [
+        [
+          "Unknown1",
+          2,
+          false
+        ],
+        [
+          "Unknown2",
+          8,
+          false
+        ],
+        [
+          "Unknown3",
+          8,
+          false
+        ],
+        [
+          "Unknown4",
+          8,
+          false
+        ],
+        [
+          "SFX ID",
+          32,
+          false
+        ],
+        [
+          "Unknown5",
+          32,
+          false
+        ],
+        [
+          "Unknown6",
+          8,
+          false
+        ],
+        [
+          "Unknown7",
+          8,
+          false
+        ],
+        [
+          "Unknown8",
+          8,
+          false
+        ],
+        [
+          "Unknown9",
+          8,
+          false
+        ]
+      ]
+    },
+    "40": {
+      "name": "Animate Texture",
+      "fields": [
+        [
+          "Material Flag",
+          1,
+          false
+        ],
+        [
+          "Material Index",
+          7,
+          false
+        ],
+        [
+          "Frame Flags",
+          7,
+          false
+        ],
+        [
+          "Frame",
+          11,
+          false
+        ]
+      ]
+    },
+    "41": {
+      "name": "Animate Model",
+      "fields": [
+        [
+          "Body Part",
+          7,
+          false
+        ],
+        [
+          "State",
+          7,
+          false
+        ],
+        [
+          "Unk",
+          12,
+          false
+        ]
+      ]
+    },
+    "42": {
+      "name": "Change Held Items Action State",
+      "fields": [
+        [
+          "Value1",
+          13,
+          false
+        ],
+        [
+          "Value2",
+          13,
+          false
+        ]
+      ]
+    },
+    "43": {
+      "name": "Rumble",
+      "fields": [
+        [
+          "Flag",
+          1,
+          false
+        ],
+        [
+          "Value1",
+          12,
+          false
+        ],
+        [
+          "Value2",
+          13,
+          false
+        ]
+      ]
+    },
+    "44": {
+      "name": "Set flag 0x221E to 20",
+      "fields": [
+        [
+          "Unknown",
+          25,
+          false
+        ],
+        [
+          "Flag",
+          1,
+          false
+        ]
+      ]
+    },
+    "45": {
+      "name": "Body Aura",
+      "fields": [
+        [
+          "Unknown",
+          8,
+          false
+        ],
+        [
+          "Duration",
+          18,
+          false
+        ]
+      ]
+    },
+    "46": {
+      "name": "Color Animation",
+      "fields": [
+        [
+          "ID",
+          8,
+          false
+        ],
+        [
+          "Duration",
+          18,
+          false
+        ]
+      ]
+    },
+    "47": {
+      "name": "Remove Color Animation",
+      "fields": [
+        [
+          "ID",
+          8,
+          false
+        ],
+        [
+          "Padding",
+          18,
+          false
+        ]
+      ]
+    },
+    "48": {
+      "name": "Unknown0xC0",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "49": {
+      "name": "Sword Trail",
+      "fields": [
+        [
+          "Beam Sword",
+          1,
+          false
+        ],
+        [
+          "Unknown",
+          17,
+          false
+        ],
+        [
+          "Render Status",
+          8,
+          false
+        ]
+      ]
+    },
+    "50": {
+      "name": "Toggle Bone Physics",
+      "fields": [
+        [
+          "Bone ID",
+          26,
+          false
+        ]
+      ]
+    },
+    "51": {
+      "name": "Self Damage",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "52": {
+      "name": "Footsnap Behavior",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "53": {
+      "name": "Set flag 0x2225 to 10",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "54": {
+      "name": "Footstep Sound and Graphic Effect",
+      "fields": [
+        [
+          "Flags",
+          26,
+          false
+        ],
+        [
+          "Sound ID",
+          32,
+          false
+        ],
+        [
+          "Padding",
+          16,
+          false
+        ],
+        [
+          "Volume",
+          8,
+          false
+        ],
+        [
+          "Panning",
+          8,
+          false
+        ]
+      ]
+    },
+    "55": {
+      "name": "Sound and Graphic Effect",
+      "fields": [
+        [
+          "Graphic ID",
+          26,
+          false
+        ],
+        [
+          "Sound ID",
+          32,
+          false
+        ],
+        [
+          "Padding",
+          16,
+          false
+        ],
+        [
+          "Volume",
+          8,
+          false
+        ],
+        [
+          "Panning",
+          8,
+          false
+        ]
+      ]
+    },
+    "56": {
+      "name": "Start Smash Charge",
+      "fields": [
+        [
+          "Unknown",
+          2,
+          false
+        ],
+        [
+          "Charge Frames",
+          8,
+          false
+        ],
+        [
+          "Charge Rate",
+          16,
+          false
+        ],
+        [
+          "Color Animation",
+          8,
+          false
+        ],
+        [
+          "Unknown",
+          24,
+          false
+        ]
+      ]
+    },
+    "57": {
+      "name": "Unknown0xE4",
+      "fields": [
+        [
+          "Unknown",
+          26,
+          false
+        ]
+      ]
+    },
+    "58": {
+      "name": "Aesthetic Wind Effect",
+      "fields": [
+        [
+          "Unknown1",
+          26,
+          false
+        ],
+        [
+          "Unknown2",
+          32,
+          false
+        ],
+        [
+          "Unknown3",
+          32,
+          false
+        ],
+        [
+          "Unknown4",
+          32,
+          false
+        ]
+      ]
+    }
+  }
+}

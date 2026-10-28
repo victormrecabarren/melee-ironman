@@ -1,0 +1,54 @@
+{
+  "finding": "Raw exports omitted ftCommonAttributes.model_scaling. Game & Watch also omitted runtime visibility, depth, costume tint, and outline pass ordering.",
+  "scalesVerified": 54,
+  "source": "PlXX.dat ftData.x0 +0x8C",
+  "checks": [
+    "All 54 facing exports match local DAT scales exactly",
+    "All available matchup contact and mobile framing tests pass",
+    "Game & Watch: 310 frames across 14 clips, zero blank or edge-clipped frames",
+    "Mobile browser checked Pichu/Dr. Mario, Pikachu/Roy, Game & Watch/Mario"
+  ],
+  "gamewatch": {
+    "mr-game-and-watch": {
+      "setup": {
+        "width": 0.009999999776482582,
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "outline": [
+          255,
+          255,
+          255,
+          128
+        ],
+        "version": "disc-gamewatch-setup-v1",
+        "outlineSource": "original DObjs from ftData.x48_items[10]"
+      },
+      "decodedMiB": 9.16
+    },
+    "mr-game-and-watch-left": {
+      "setup": {
+        "width": 0.009999999776482582,
+        "color": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "outline": [
+          255,
+          255,
+          255,
+          128
+        ],
+        "version": "disc-gamewatch-setup-v1",
+        "outlineSource": "original DObjs from ftData.x48_items[10]"
+      },
+      "decodedMiB": 9.17
+    }
+  },
+  "scope": "Correct original character sizing and Game & Watch base-model setup; not full game simulation or a complete accessory/item renderer."
+}

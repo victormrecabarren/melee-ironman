@@ -1,0 +1,572 @@
+{
+  "dr-mario": {
+    "idle": {
+      "minSilhouetteIoU": 0.98394,
+      "maxCentroidShiftPx": 0.44
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.98365,
+      "maxCentroidShiftPx": 0.383
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.98448,
+      "maxCentroidShiftPx": 0.45
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.98159,
+      "maxCentroidShiftPx": 0.495
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.97689,
+      "maxCentroidShiftPx": 0.403
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.98399,
+      "maxCentroidShiftPx": 0.412
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.97824,
+      "maxCentroidShiftPx": 0.404
+    }
+  },
+  "dr-mario-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99875,
+      "maxCentroidShiftPx": 0.032
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99909,
+      "maxCentroidShiftPx": 0.019
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99934,
+      "maxCentroidShiftPx": 0.014
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99872,
+      "maxCentroidShiftPx": 0.026
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99934,
+      "maxCentroidShiftPx": 0.02
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99906,
+      "maxCentroidShiftPx": 0.022
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99912,
+      "maxCentroidShiftPx": 0.027
+    }
+  },
+  "luigi": {
+    "idle": {
+      "minSilhouetteIoU": 0.99815,
+      "maxCentroidShiftPx": 0.036
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.9993,
+      "maxCentroidShiftPx": 0.021
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99859,
+      "maxCentroidShiftPx": 0.04
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99874,
+      "maxCentroidShiftPx": 0.028
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99876,
+      "maxCentroidShiftPx": 0.037
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99834,
+      "maxCentroidShiftPx": 0.032
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99878,
+      "maxCentroidShiftPx": 0.017
+    }
+  },
+  "luigi-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99905,
+      "maxCentroidShiftPx": 0.029
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99899,
+      "maxCentroidShiftPx": 0.017
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99925,
+      "maxCentroidShiftPx": 0.021
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99847,
+      "maxCentroidShiftPx": 0.025
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99891,
+      "maxCentroidShiftPx": 0.031
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99885,
+      "maxCentroidShiftPx": 0.024
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99857,
+      "maxCentroidShiftPx": 0.035
+    }
+  },
+  "mario": {
+    "idle": {
+      "minSilhouetteIoU": 0.99839,
+      "maxCentroidShiftPx": 0.033
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99907,
+      "maxCentroidShiftPx": 0.043
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99906,
+      "maxCentroidShiftPx": 0.03
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99902,
+      "maxCentroidShiftPx": 0.038
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99919,
+      "maxCentroidShiftPx": 0.024
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99901,
+      "maxCentroidShiftPx": 0.028
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.9989,
+      "maxCentroidShiftPx": 0.027
+    }
+  },
+  "mario-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99892,
+      "maxCentroidShiftPx": 0.04
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99935,
+      "maxCentroidShiftPx": 0.02
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99934,
+      "maxCentroidShiftPx": 0.021
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99878,
+      "maxCentroidShiftPx": 0.035
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99892,
+      "maxCentroidShiftPx": 0.031
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99929,
+      "maxCentroidShiftPx": 0.028
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99875,
+      "maxCentroidShiftPx": 0.034
+    }
+  },
+  "marth-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99928,
+      "maxCentroidShiftPx": 0.043
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.9987,
+      "maxCentroidShiftPx": 0.016
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99881,
+      "maxCentroidShiftPx": 0.035
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99876,
+      "maxCentroidShiftPx": 0.046
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99884,
+      "maxCentroidShiftPx": 0.026
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.9985,
+      "maxCentroidShiftPx": 0.036
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99912,
+      "maxCentroidShiftPx": 0.034
+    }
+  },
+  "yoshi": {
+    "idle": {
+      "minSilhouetteIoU": 0.99868,
+      "maxCentroidShiftPx": 0.051
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99946,
+      "maxCentroidShiftPx": 0.016
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99907,
+      "maxCentroidShiftPx": 0.021
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99915,
+      "maxCentroidShiftPx": 0.029
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.9991,
+      "maxCentroidShiftPx": 0.016
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.9993,
+      "maxCentroidShiftPx": 0.015
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99934,
+      "maxCentroidShiftPx": 0.027
+    }
+  },
+  "yoshi-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99881,
+      "maxCentroidShiftPx": 0.03
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99947,
+      "maxCentroidShiftPx": 0.016
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99868,
+      "maxCentroidShiftPx": 0.046
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99916,
+      "maxCentroidShiftPx": 0.027
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99933,
+      "maxCentroidShiftPx": 0.025
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99932,
+      "maxCentroidShiftPx": 0.024
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99903,
+      "maxCentroidShiftPx": 0.023
+    }
+  },
+  "captain-falcon": {
+    "idle": {
+      "minSilhouetteIoU": 0.99904,
+      "maxCentroidShiftPx": 0.033
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99963,
+      "maxCentroidShiftPx": 0.015
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99938,
+      "maxCentroidShiftPx": 0.024
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99887,
+      "maxCentroidShiftPx": 0.038
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99949,
+      "maxCentroidShiftPx": 0.023
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99884,
+      "maxCentroidShiftPx": 0.041
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.9989,
+      "maxCentroidShiftPx": 0.035
+    }
+  },
+  "captain-falcon-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99936,
+      "maxCentroidShiftPx": 0.018
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99947,
+      "maxCentroidShiftPx": 0.013
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99941,
+      "maxCentroidShiftPx": 0.019
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99902,
+      "maxCentroidShiftPx": 0.034
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99889,
+      "maxCentroidShiftPx": 0.022
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.9987,
+      "maxCentroidShiftPx": 0.031
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99896,
+      "maxCentroidShiftPx": 0.044
+    }
+  },
+  "donkey-kong": {
+    "idle": {
+      "minSilhouetteIoU": 0.99938,
+      "maxCentroidShiftPx": 0.032
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99967,
+      "maxCentroidShiftPx": 0.014
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99956,
+      "maxCentroidShiftPx": 0.015
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99949,
+      "maxCentroidShiftPx": 0.018
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99961,
+      "maxCentroidShiftPx": 0.018
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99968,
+      "maxCentroidShiftPx": 0.015
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99948,
+      "maxCentroidShiftPx": 0.022
+    }
+  },
+  "donkey-kong-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99928,
+      "maxCentroidShiftPx": 0.029
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99952,
+      "maxCentroidShiftPx": 0.011
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99966,
+      "maxCentroidShiftPx": 0.014
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99938,
+      "maxCentroidShiftPx": 0.023
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99954,
+      "maxCentroidShiftPx": 0.032
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99961,
+      "maxCentroidShiftPx": 0.015
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99948,
+      "maxCentroidShiftPx": 0.017
+    }
+  },
+  "peach": {
+    "idle": {
+      "minSilhouetteIoU": 0.9989,
+      "maxCentroidShiftPx": 0.045
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99906,
+      "maxCentroidShiftPx": 0.025
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99926,
+      "maxCentroidShiftPx": 0.012
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99886,
+      "maxCentroidShiftPx": 0.027
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99919,
+      "maxCentroidShiftPx": 0.017
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99907,
+      "maxCentroidShiftPx": 0.026
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99925,
+      "maxCentroidShiftPx": 0.026
+    }
+  },
+  "peach-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.99919,
+      "maxCentroidShiftPx": 0.043
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99941,
+      "maxCentroidShiftPx": 0.023
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.9989,
+      "maxCentroidShiftPx": 0.029
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99877,
+      "maxCentroidShiftPx": 0.039
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99912,
+      "maxCentroidShiftPx": 0.021
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99907,
+      "maxCentroidShiftPx": 0.015
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99926,
+      "maxCentroidShiftPx": 0.028
+    }
+  },
+  "falco": {
+    "idle": {
+      "minSilhouetteIoU": 0.99834,
+      "maxCentroidShiftPx": 0.042
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99951,
+      "maxCentroidShiftPx": 0.015
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99842,
+      "maxCentroidShiftPx": 0.027
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.9985,
+      "maxCentroidShiftPx": 0.033
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99899,
+      "maxCentroidShiftPx": 0.025
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99917,
+      "maxCentroidShiftPx": 0.019
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99903,
+      "maxCentroidShiftPx": 0.024
+    }
+  },
+  "ganondorf": {
+    "idle": {
+      "minSilhouetteIoU": 0.9993,
+      "maxCentroidShiftPx": 0.04
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.99943,
+      "maxCentroidShiftPx": 0.011
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.99924,
+      "maxCentroidShiftPx": 0.033
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.99905,
+      "maxCentroidShiftPx": 0.037
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.99928,
+      "maxCentroidShiftPx": 0.032
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.99918,
+      "maxCentroidShiftPx": 0.043
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.99939,
+      "maxCentroidShiftPx": 0.021
+    }
+  },
+  "roy": {
+    "idle": {
+      "minSilhouetteIoU": 0.98147,
+      "maxCentroidShiftPx": 0.443
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.97629,
+      "maxCentroidShiftPx": 0.388
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.96554,
+      "maxCentroidShiftPx": 0.683
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.96957,
+      "maxCentroidShiftPx": 0.505
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.96558,
+      "maxCentroidShiftPx": 0.517
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.96792,
+      "maxCentroidShiftPx": 0.441
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.97313,
+      "maxCentroidShiftPx": 0.375
+    }
+  },
+  "roy-left": {
+    "idle": {
+      "minSilhouetteIoU": 0.98147,
+      "maxCentroidShiftPx": 0.443
+    },
+    "fall": {
+      "minSilhouetteIoU": 0.97629,
+      "maxCentroidShiftPx": 0.388
+    },
+    "landing": {
+      "minSilhouetteIoU": 0.96554,
+      "maxCentroidShiftPx": 0.683
+    },
+    "smash": {
+      "minSilhouetteIoU": 0.96957,
+      "maxCentroidShiftPx": 0.505
+    },
+    "recoil": {
+      "minSilhouetteIoU": 0.96558,
+      "maxCentroidShiftPx": 0.517
+    },
+    "hit": {
+      "minSilhouetteIoU": 0.96792,
+      "maxCentroidShiftPx": 0.441
+    },
+    "tumble": {
+      "minSilhouetteIoU": 0.97313,
+      "maxCentroidShiftPx": 0.375
+    }
+  }
+}

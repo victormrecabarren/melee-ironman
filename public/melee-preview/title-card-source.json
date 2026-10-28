@@ -1,0 +1,28 @@
+{
+  "archive": "GmTtAll.usd",
+  "sha256": "d9e385cc09fc8783334f897eed2a1bbf241ce6c2c439af9b4cb1f95ba5d24851",
+  "root": "TtlMoji_Top_joint",
+  "textures": {
+    "title-logo": {
+      "imageId": 6348,
+      "dimensions": [
+        448,
+        128
+      ]
+    },
+    "title-melee": {
+      "imageId": 11364,
+      "dimensions": [
+        176,
+        40
+      ]
+    },
+    "title-symbol": {
+      "imageId": 9960,
+      "dimensions": [
+        48,
+        44
+      ]
+    }
+  }
+}

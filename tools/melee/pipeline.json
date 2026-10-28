@@ -1,0 +1,199 @@
+{
+  "purpose": "Disc-derived animation preview with two-stock roster progression and manual correction controls",
+  "python": "3.11",
+  "importer": {
+    "repository": "https://github.com/StarsMmd/Blender-Addon-Gamecube-Models",
+    "commit": "dc71de837978a6a2fe8c5082f2840cfafb135235",
+    "archive": "https://github.com/StarsMmd/Blender-Addon-Gamecube-Models/archive/dc71de837978a6a2fe8c5082f2840cfafb135235.zip"
+  },
+  "references": [
+    "https://github.com/visgotti/melee-blender/blob/master/hsd-export/app/HSDRaw/Common/Animation/HSD_FigaTree.cs",
+    "https://github.com/visgotti/melee-blender/blob/master/hsd-export/app/HSDRaw/Common/Animation/HSD_Track.cs",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/ftparts.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/gr/grlast.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ef/efasync.c",
+    "https://github.com/visgotti/melee-blender/tree/master/hsd-export/app/HSDRaw/Melee",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/kinds/ftCommon/ftCo_Damage.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/kinds/ftCommon/ftCo_09F7.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/lb/lb_013B.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/jobj.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/tobj.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/kinds/ftCommon/ftCo_DamageFall.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/ftdrawcommon.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/gr/ground.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/gr/types.h",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/lb/forward.h",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/ftcoll.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/if/ifstock.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/gm/gm_1601.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/particle.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/lobj.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/mobj.c",
+    "https://github.com/doldecomp/melee/blob/master/src/sysdolphin/baselib/jobj.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/kinds/ftCommon/ftCo_0A01.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/fighter.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/ftcommon.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/kinds/ftGameWatch/ftgamewatch.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/lb/lbcollision.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/ft/ftdynamics.c",
+    "https://github.com/doldecomp/melee/blob/master/src/melee/lb/lb_00F9.c"
+  ],
+  "reproduce": [
+    "Create a Python 3.11 virtual environment and install tools/melee/requirements.txt.",
+    "Download and unpack the pinned importer archive outside public/.",
+    "python tools/melee/extract.py '/path/to/local/disc.iso-or.zip' /path/to/extracted-data",
+    "python tools/melee/render_preview.py --importer /path/to/unpacked-importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/render_environment.py --importer /path/to/unpacked-importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/render_match_effects.py --importer /path/to/unpacked-importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/render_particles.py --importer /path/to/unpacked-importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/common_states.py --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/render_audio.py --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/stage_data.py --data /path/to/extracted-data --output public/melee-preview",
+    "Run the Vite dev server and open /?animation-preview.",
+    "python tools/melee/render_roster.py --importer /path/to/importer --data /path/to/extracted-data --output /path/to/staging --resume",
+    "python tools/melee/import_roster.py --staged /path/to/staging --output public/melee-preview",
+    "python tools/melee/export_stocks.py --importer /path/to/importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/export_quake.py --importer /path/to/importer --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/compact_effects.py --output public/melee-preview (after exporting KO models and particles)",
+    "python tools/melee/refresh_installed_materials.py --importer /path/to/importer --data /path/to/extracted-data --output public/melee-preview --staging /path/to/material-staging --workers 4",
+    "python tools/melee/export_roster_audio.py --data /path/to/extracted-data --output public/melee-preview",
+    "python tools/melee/export_combat_geometry.py --importer /path/to/importer --data /path/to/extracted-data --output /path/to/staged/fighter",
+    "python tools/melee/compact_fighters.py --output public/melee-preview (after all fighter imports)",
+    "python tools/melee/compact_fighters.py --output public/melee-preview --environment (after all effect exports)"
+  ],
+  "render": {
+    "engine": "Blender Cycles",
+    "samples": 16,
+    "fps": "60 for attacks, tumble, particles and environment effects; 30 for idle/fall/landing",
+    "frameSize": [
+      512,
+      384
+    ],
+    "atlasColumns": 8,
+    "output": "Transparent WebP sprite atlases, selected frame by canvas",
+    "effectFraming": "Dust effects use a padded 512px view at 12 world units, preserving pixel density and matching the fighter camera pitch. All exported dust/landing/smash-ground frames have black image borders.",
+    "particleLayering": "Contact particles use their exported pixelsPerGameUnit (5), matching fighter scale. The large burst stays behind both fighters; hand sparks render over the attacker and body arcs over the victim.",
+    "playbackClock": "Live playback advances at most two game frames per browser callback. Normal 30/60/120 Hz callbacks preserve speed; delayed callbacks pause the sequence instead of skipping short impact effects. Frame inspection still addresses the source timeline directly.",
+    "damageShake": "Original PlCo.dat ftLoadCommonData.x24 electric five-frame / normal four-frame shift tables, facing-adjusted at 60 Hz. Duration uses common 0x168 * hitlag + 0x16C, truncated as in ftCo_80090594. Draw-only displacement uses the same scale/pitch as the fighter export; skeleton playback and physics stay frozen during hitlag. Controller-driven SDI is not synthesized.",
+    "stageProjection": "2400 \u00d7 1240 stage export at 21 m orthographic width; stage, fighters and revival platforms share a 0.1 m/game-unit scale. Camera zoom applies to the whole scene; magnifier and KO remain screen-space.",
+    "royFacingAndSlash": "Roy is rendered with Z=-pi/2 for a left-facing view. AttackS4 strong hitboxes use element3 (HitElement_Slash), mapped by ftcoll.c to effect1004 and efasync.c to original model8. No fire/burn cycle is added. The original warm-colored sword trail is exported from the fighter trail parameters.",
+    "cameraPresentation": "Desktop 1200\u00d7620 and portrait mobile 600\u00d7900 canvases. One close view is shared by entrance, respawn and landing; launch tracks within stage bounds while keeping the survivor visible. KO freezes the return origin and eases once back to the shared view. Raised revival platforms use the same camera. Transparent semantic buttons over the projected settled fighters select the winner and disable throughout the result/respawn.",
+    "stockHUD": "Original IfAll Stc_scemdls portraits, neutral costume timeline selection via gm_80168B34, sampled original joint channels 5/6 for 10-frame loss motion, and original EfCoData generator 247 (gfx 0x474). Canvas repositions the HUD to upper corners.",
+    "koPresentation": "Original model 25, original generator 212 (root HSD_A_J_PTCL event 0x3500), and GrNLa quake_model_set animation 3. Stable screen-relative size; no world-camera zoom conversion. Compact atlas rectangles preserve logical source coordinates and remove empty padding. Screen-blended black model texels become transparent with equivalent premultiplied RGB. Viewport scale increased from 2.4 to 2.76 (15%) without changing packed atlases.",
+    "fire": "Mario effect 1041 invokes generator 75 and its children. Hand fire snapshots the event position; body-fire clouds retain their emission positions instead of following the launched victim.",
+    "fighterMaterials": {
+      "version": "source-specular-v1",
+      "specularColor": "Blender 4 color tint uses the original specular RGB converted to linear; no legacy scalar tint inversion.",
+      "strength": "Fixed dielectric IOR level 0.5 when original specular is enabled, zero otherwise. Shininess never controls highlight amplitude.",
+      "roughness": "GGX normalized-lobe half-width matched to HSD_LObjSetup attenuation using k=shininess/2. This is an approximation, not full GX vertex shading.",
+      "lights": "Existing export lights retained to isolate the material correction; original stage lighting is not reproduced."
+    },
+    "combatSpacing": {
+      "geometry": "Original command-stream hit spheres posed on every active frame; original ftData.x30 hurt capsules posed at idle frame zero, in game units. Includes animated forward travel.",
+      "contact": "Longest reaching contact with the selected damage and element; choose the earliest frame within 0.1 units of peak reach. 0.35 units of contact overlap.",
+      "layout": "Shared matchup gap is max(22 game units, either contact distance + 2 units). Per-winner approach covers only the remaining gap; camera and tap targets use the same homes.",
+      "limitations": "Neutral idle hurt pose; no full runtime collision simulation, SDI, accessory physics, or dynamic common-bone/custom fighter-code hitboxes."
+    },
+    "normalImpact": "EfCoData model 10 contains HSD_A_J_PTCL tracks, not mesh geometry. Packed track words 0x80/0x4C80/0x4CC0 spawn bank-0 generators 2/306/307. Original damage scale clamp(.3+.04*damage,.3,1.5). Fixed RNG chooses reproducible particle positions; alternate random model9 and knockback-dependent effect selection remain outside this preview.",
+    "fighterPacking": "trimmed-pages-v1: lossless visible rectangles with original offsets, frame timings and no resampling. Pages <=2048px. Ness idle reduced from 210 MiB decoded to 7.63 MiB; all Ness clips total 13.15 MiB."
+  },
+  "arrivalPlatform": {
+    "source": "PlCo.dat ftLoadCommonData+0x40, Fighter_804D6514, attached in ftCo_800C6408 (EntryStart)",
+    "scale": "Each fighter common attribute +0x110 trophy_scale; separate from model scale. Top anchor at source 1.497345 game units.",
+    "presentation": "Original trophy pedestal rendered at the shared elevated platform height. Fresh two-stock characters have no revival overlays; same-character one-stock returns retain revival platform and invincibility. Original trophy growth/entry poses are not simulated; the existing hold/drop choreography is retained."
+  },
+  "limitations": [
+    "Full 26-character export is staged and mechanically audited; not all custom move mechanisms, secondary fighters, materials, effects, or audio are certified. Preparing entries remain disabled until their exports are installed.",
+    "Original models, textures and skeleton tracks are used. Runtime accessory physics, complete material/GX lighting, and all fighter mesh switches are not simulated.",
+    "Final Destination groups 1\u20133 and the revival platform/glows are original; the sky and Blender lighting remain approximations.",
+    "A bounded particle command interpreter supports the selected original effects with a deterministic random seed; it is not the complete GameCube particle engine. Particle presentation scale is calibrated to the supplied reference, not an emulated camera.",
+    "Original damage colors (including body-attached effects), hitlag parameters, move events, landing dust/audio, magnifier artwork and port-colored KO geometry are used.",
+    "The standard preview launch holds DamageFlyN frame zero through hitlag, then advances the same animation without looping. DamageFlyRoll remains exported but is not forced on every hit; actual reaction selection depends on hurtbox, percent, launch angle and RNG.",
+    "The camera tracks in 2D within extracted stage bounds and the launch reaches the original horizontal blast zones. Camera easing, approach and launch trajectory are staged; this is not the game's perspective camera solver. This does not reproduce Fox's aerial DI/knockback from the reference video.",
+    "The original post-drop overlay cycle plays at 60 fps for half its disc duration, per the requested preview pacing (ends at inspection frame 123)."
+  ],
+  "importerFixes": [
+    "Correct GX TEV alpha Math input indices (0/1, not MixRGB 1/2).",
+    "Bind original HSD_A_T_BLEND curves to independent shader node-tree actions; preserve wrapping/TEV dependencies.",
+    "Apply original HSD_A_J_NODE/BRANCH visibility each frame; hidden KO pieces must not persist through all frames."
+  ],
+  "referenceReview": {
+    "clip": "ScreenRecording_10-27-2026 20-51-14_1.mov (latest attachment)",
+    "decodedFrames": 84,
+    "durationSeconds": 1.4,
+    "numbering": "One-based decoded frames; some are duplicates, so game clock is the timing cross-check.",
+    "observations": [
+      {
+        "frames": "1\u201314",
+        "detail": "Airborne Fox at 99%; Dr. Mario plants his feet and winds up. Our preview still uses a staged approach."
+      },
+      {
+        "frames": "15\u201320",
+        "detail": "19-damage contact (Fox reaches 118%); large blue-white burst behind the fighters, held attack/damage poses."
+      },
+      {
+        "frames": "21\u201326",
+        "detail": "Large burst clears; alternating damage tint and smaller attached purple arcs remain through hitstop."
+      },
+      {
+        "frames": "27\u201333",
+        "detail": "Fox releases into steep upward tumble with trailing puffs. Preview uses Roy and a staged side launch, so this trajectory is not copied."
+      },
+      {
+        "frames": "34\u201376",
+        "detail": "Offscreen magnifier tracks Fox for a sustained interval while Dr. Mario recovers; camera zooms out."
+      },
+      {
+        "frames": "77\u201384",
+        "detail": "Magnifier disappears at KO; large blue-white blast wave and streaks enter from the upper edge."
+      }
+    ]
+  },
+  "fighterSizing": {
+    "source": "PlXX.dat ftData.x0 common attributes +0x8C (model_scaling)",
+    "runtime": "Fighter_UpdateModelScale / ftCommon_GetModelScale",
+    "application": "fighterScale.js multiplies export camera compensation by modelScale around the source ground anchor. Camera bounds and attachment projections use the same helper. Contact centers and hurt radii follow model scale; hit radii remain in world units.",
+    "gamewatch": "ftGw_Init_OnDeath model groups; ftGw_Init_OnLoad depth override and costume/outline RGBA; original outline DObjs from item visibility table 10, composed behind body as in ftDrawCommon_80080E18.",
+    "backfill": "python tools/melee/export_fighter_scales.py --data /path/to/extracted-data --output public/melee-preview"
+  },
+  "accessoryDynamics": {
+    "version": "disc-accessory-dynamics-v1",
+    "characters": [
+      "Bowser",
+      "Donkey Kong"
+    ],
+    "data": "PlKp.dat / PlDk.dat ftData.x2C, source model joints, and per-motion animation flags",
+    "algorithm": "Baked at 60 Hz before model import; source natural direction, stiffness, gravity, inertia, max-step/convergence/deviation limits, angular damping, and DK body sphere avoidance from lb_8001044C. DK idle solves all five links; other exported motions retain the animated root according to ftCo_8009E4A8.",
+    "initialization": "120 settled steps; looping idle/fall also get two full lead-in cycles. Wait is recognized as an idle loop as well as Wait1.",
+    "limitations": "Standalone clips do not carry physics history between states and do not simulate external force fields or moving/sloped floor collisions. Only the two verified character chains are enabled. Flat floor contact is adapted for this preview.",
+    "validation": "Source parameter/flag tests, complete atlas blank/clipping checks, both facing directions, visual review of idle/drop/smash."
+  },
+  "matchEnd": {
+    "graphic": "IfAll.usd ScInfCnt_scene_models[5]; original material and joint animation, source frames 0\u201311 then hold",
+    "audio": "audio/us/nr_name.ssm; smash2.sem sound 510037 -> sample 1513; source announcer delay 8 overlay frames",
+    "trigger": "Only final roster stock: Game! begins at koAt; match and base camera framing hold at KO while explosion, stock removal and source quake play to completion. No return-to-respawn zoom.",
+    "presentation": "Original HUD model projected into canvas-adapted camera; immediate overlay requested by user; no recreated lettering or synthesized speech"
+  },
+  "linkSmashSequence": {
+    "sources": "PlLk/PlCl AttackS41 then AttackS42; original skeletal animations and command streams",
+    "input": "Earliest legal A follow-up from ftCo_800CECE8 in ftattacks4combo.c: cmd_vars[0] gate at first-action frame 19 (Link), 20 (Young Link); follow-up resets animation frame to zero.",
+    "contacts": "First contact source frame 15; finishing contact second-action frame 10 (sequence frame 29/30). Original per-hit damage and hitlag. Recoil through the first contact, DamageFlyN at final contact, then staged preview launch.",
+    "trails": "Both command windows, original ftLk_DatAttrs.x64 sword endpoints/colors/shrink and ftAfterImage three-sample history; reset history between actions.",
+    "export": "render_preview.py samples the two decoded source actions into one 60 Hz atlas; neither browser timing nor the asset contains duplicated first-swing recovery. Combined geometry and attachment metadata regenerated for each facing."
+  },
+  "smashChargeAndTaunt": {
+    "source": [
+      "Pl*.dat opcode 56",
+      "PlCo.dat color119, x2C shake, common 0x7C8",
+      "EfCoData.dat generators 263 / 90 / 93 and models 18 / 4",
+      "smash2.sem and original SSM banks",
+      "Pl*AJ.dat Appeal / AppealL / AppealR",
+      "PlDr.dat item motion2; PlCl.dat milk item actions0/1",
+      "HSD_JObjMakeMatrix and AXDriverExec"
+    ],
+    "install": "tools/melee/install_interactions.py validates all54 facings, copies only new taunt clips, packs2048px pages and atomically switches manifest",
+    "behavior": "Hold original opcode56 pose, release at pointer/key release or60 held frames; cancel abandoned input without taking stock; celebrate on opponent character final stock after smash recovery while the next fighter respawns independently",
+    "projection": "Taunt clips retain their own exportScale and anchor so baseline Dr Mario combat sprites can coexist with wider taunt exports",
+    "limitations": "Preview choreography, deterministic particle seed and sound variant; not a full Melee engine. Existing expression/lighting/physics approximation limits still apply."
+  }
+}

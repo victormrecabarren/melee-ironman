@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Dr. Mario",
+    "code": "Dr",
+    "kind": 21,
+    "slug": "dr-mario"
+  },
+  {
+    "name": "Mario",
+    "code": "Mr",
+    "kind": 0,
+    "slug": "mario"
+  },
+  {
+    "name": "Luigi",
+    "code": "Lg",
+    "kind": 17,
+    "slug": "luigi"
+  },
+  {
+    "name": "Bowser",
+    "code": "Kp",
+    "kind": 5,
+    "slug": "bowser"
+  },
+  {
+    "name": "Peach",
+    "code": "Pe",
+    "kind": 9,
+    "slug": "peach"
+  },
+  {
+    "name": "Yoshi",
+    "code": "Ys",
+    "kind": 14,
+    "slug": "yoshi"
+  },
+  {
+    "name": "Donkey Kong",
+    "code": "Dk",
+    "kind": 3,
+    "slug": "donkey-kong"
+  },
+  {
+    "name": "Captain Falcon",
+    "code": "Ca",
+    "kind": 2,
+    "slug": "captain-falcon"
+  },
+  {
+    "name": "Ganondorf",
+    "code": "Gn",
+    "kind": 25,
+    "slug": "ganondorf"
+  },
+  {
+    "name": "Falco",
+    "code": "Fc",
+    "kind": 22,
+    "slug": "falco"
+  },
+  {
+    "name": "Fox",
+    "code": "Fx",
+    "kind": 1,
+    "slug": "fox"
+  },
+  {
+    "name": "Ness",
+    "code": "Ns",
+    "kind": 8,
+    "slug": "ness"
+  },
+  {
+    "name": "Ice Climbers",
+    "code": "Pp",
+    "kind": 10,
+    "slug": "ice-climbers"
+  },
+  {
+    "name": "Kirby",
+    "code": "Kb",
+    "kind": 4,
+    "slug": "kirby"
+  },
+  {
+    "name": "Samus",
+    "code": "Ss",
+    "kind": 13,
+    "slug": "samus"
+  },
+  {
+    "name": "Zelda",
+    "code": "Zd",
+    "kind": 19,
+    "slug": "zelda"
+  },
+  {
+    "name": "Sheik",
+    "code": "Sk",
+    "kind": 7,
+    "slug": "sheik"
+  },
+  {
+    "name": "Link",
+    "code": "Lk",
+    "kind": 6,
+    "slug": "link"
+  },
+  {
+    "name": "Young Link",
+    "code": "Cl",
+    "kind": 20,
+    "slug": "young-link"
+  },
+  {
+    "name": "Pichu",
+    "code": "Pc",
+    "kind": 23,
+    "slug": "pichu"
+  },
+  {
+    "name": "Pikachu",
+    "code": "Pk",
+    "kind": 12,
+    "slug": "pikachu"
+  },
+  {
+    "name": "Jigglypuff",
+    "code": "Pr",
+    "kind": 15,
+    "slug": "jigglypuff"
+  },
+  {
+    "name": "Mewtwo",
+    "code": "Mt",
+    "kind": 16,
+    "slug": "mewtwo"
+  },
+  {
+    "name": "Mr. Game & Watch",
+    "code": "Gw",
+    "kind": 24,
+    "slug": "mr-game-and-watch"
+  },
+  {
+    "name": "Marth",
+    "code": "Ms",
+    "kind": 18,
+    "slug": "marth"
+  },
+  {
+    "name": "Roy",
+    "code": "Fe",
+    "kind": 26,
+    "slug": "roy"
+  }
+]

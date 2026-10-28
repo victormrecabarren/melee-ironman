@@ -1,0 +1,76 @@
+{
+  "discId": "GALE01",
+  "revision": 2,
+  "files": {
+    "smash2.sem": {
+      "discPath": "audio/us/smash2.sem",
+      "bytes": 132184,
+      "sha256": "e844649df8127553f53d2c422375b20f0b814b2f6cc60333028b398dae4854f8"
+    },
+    "drmario.ssm": {
+      "discPath": "audio/us/drmario.ssm",
+      "bytes": 416480,
+      "sha256": "1703530fb3bec04fec6b3ac7e19a28ff84340c92e37e3b20df6b8876cd315890"
+    },
+    "emblem.ssm": {
+      "discPath": "audio/us/emblem.ssm",
+      "bytes": 484928,
+      "sha256": "0c2a406286870c414cc66cf60b1501c08d41dd22e240e589cdc64cbd042300f1"
+    },
+    "main.ssm": {
+      "discPath": "audio/us/main.ssm",
+      "bytes": 2065152,
+      "sha256": "949c005709bae3fc72480e76dd1700afa5ec07d0d417fea30cd5524cf55fff20"
+    },
+    "GrNLa.dat": {
+      "discPath": "GrNLa.dat",
+      "bytes": 611125,
+      "sha256": "2a295a733414fb65a7061a5c092144fb197570682562b87ba5567ff3f08abb02"
+    },
+    "PlDr.dat": {
+      "discPath": "PlDr.dat",
+      "bytes": 251170,
+      "sha256": "dbd729b1e038a6da6a90a732416aca164f5e55dc2ec7024555a6eaa0a926bb8c"
+    },
+    "PlDrNr.dat": {
+      "discPath": "PlDrNr.dat",
+      "bytes": 483014,
+      "sha256": "c1be714a4f9c4a5ef24770f427fc13d9b9d315e6ef7eb71a13b9d78d67d7f672"
+    },
+    "PlDrAJ.dat": {
+      "discPath": "PlDrAJ.dat",
+      "bytes": 1280960,
+      "sha256": "f718e88d7d1188d4e55ce66111788d7db6c6fcaeaf2db7c728e2cca5aa0931b3"
+    },
+    "PlFe.dat": {
+      "discPath": "PlFe.dat",
+      "bytes": 268085,
+      "sha256": "5d8ec1eb2821e8700ee3ed8020d1b57ca5f857468dad3eddfc28bbc398169648"
+    },
+    "PlFeNr.dat": {
+      "discPath": "PlFeNr.dat",
+      "bytes": 660284,
+      "sha256": "0e861f97db059e2672b7102601ff66e55430a1fe24a530d1a6f4630f5af642a7"
+    },
+    "PlFeAJ.dat": {
+      "discPath": "PlFeAJ.dat",
+      "bytes": 2027200,
+      "sha256": "8c235de3cd367e91c4db74e902f7b064dc8f1a2e34bb8515006c19f8e13fbd99"
+    },
+    "EfCoData.dat": {
+      "discPath": "EfCoData.dat",
+      "bytes": 1334111,
+      "sha256": "996d78e2c0f4f550f968e2bd8f5e0d18fb8a7525f7e1cb7849a0c836bd7691c0"
+    },
+    "IfAll.dat": {
+      "discPath": "IfAll.dat",
+      "bytes": 901564,
+      "sha256": "5b87322971fd5ede188da0b1b47a2691c2c7ad3517bc95012419c753a84b236c"
+    },
+    "PlCo.dat": {
+      "discPath": "PlCo.dat",
+      "bytes": 149101,
+      "sha256": "63841336337eb5a7366b06ccc60ea4bd37c3604ab56e19939d78b9aa9cdd234c"
+    }
+  }
+}

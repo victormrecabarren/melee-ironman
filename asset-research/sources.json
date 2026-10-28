@@ -1,0 +1,18 @@
+{
+  "purpose": "Research samples only; not integrated into the app.",
+  "creator": "Emi / Emilia (Emi's Melee Framedata), linked by FightCore.",
+  "library": "https://drive.google.com/drive/folders/14rcZ8ed43hWOJaxQhHsB-hcAgxWubRaz",
+  "creatorNotes": "https://docs.google.com/document/d/1dtwRRyMefmGxAPbtLEvmmT6iuG4QwssYsF5kiDBB_0g/edit",
+  "recordingTool": "https://github.com/NeilHarbin0/AlphaSolveVideo",
+  "finding": "Both sampled GIFs have baked-in hitbox/hurtbox overlays and debug text. Not suitable as clean fighter art. No idle/respawn/damage clips found in inspected Dr_Mario and Roy folders.",
+  "samples": [
+    {
+      "file": "dr_mario-forward-smash.gif",
+      "source": "https://drive.google.com/file/d/1r9Pjv7ET-ShT8IMcwoQR0CMW_iGzjKtc/view?usp=drivesdk"
+    },
+    {
+      "file": "roy-forward-smash.gif",
+      "source": "https://drive.google.com/file/d/11k-Fhg-RjBJXRzI5H3x0MAhdf8fyVeGf/view?usp=drivesdk"
+    }
+  ]
+}

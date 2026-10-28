@@ -1,0 +1,97 @@
+{
+  "dr-mario": {
+    "materials": 72,
+    "withSpecular": 11,
+    "coloredOrDarkHighlights": 2
+  },
+  "roy": {
+    "materials": 121,
+    "withSpecular": 32,
+    "coloredOrDarkHighlights": 22
+  },
+  "roy-left": {
+    "materials": 121,
+    "withSpecular": 32,
+    "coloredOrDarkHighlights": 22
+  },
+  "dr-mario-left": {
+    "materials": 72,
+    "withSpecular": 11,
+    "coloredOrDarkHighlights": 2
+  },
+  "luigi": {
+    "materials": 65,
+    "withSpecular": 11,
+    "coloredOrDarkHighlights": 2
+  },
+  "luigi-left": {
+    "materials": 65,
+    "withSpecular": 11,
+    "coloredOrDarkHighlights": 2
+  },
+  "mario": {
+    "materials": 68,
+    "withSpecular": 5,
+    "coloredOrDarkHighlights": 2
+  },
+  "mario-left": {
+    "materials": 68,
+    "withSpecular": 5,
+    "coloredOrDarkHighlights": 2
+  },
+  "marth-left": {
+    "materials": 105,
+    "withSpecular": 53,
+    "coloredOrDarkHighlights": 30
+  },
+  "yoshi": {
+    "materials": 76,
+    "withSpecular": 51,
+    "coloredOrDarkHighlights": 51
+  },
+  "yoshi-left": {
+    "materials": 76,
+    "withSpecular": 51,
+    "coloredOrDarkHighlights": 51
+  },
+  "captain-falcon": {
+    "materials": 98,
+    "withSpecular": 34,
+    "coloredOrDarkHighlights": 0
+  },
+  "captain-falcon-left": {
+    "materials": 98,
+    "withSpecular": 34,
+    "coloredOrDarkHighlights": 0
+  },
+  "donkey-kong": {
+    "materials": 61,
+    "withSpecular": 38,
+    "coloredOrDarkHighlights": 36
+  },
+  "donkey-kong-left": {
+    "materials": 61,
+    "withSpecular": 38,
+    "coloredOrDarkHighlights": 36
+  },
+  "peach": {
+    "materials": 105,
+    "withSpecular": 69,
+    "coloredOrDarkHighlights": 53
+  },
+  "peach-left": {
+    "materials": 105,
+    "withSpecular": 69,
+    "coloredOrDarkHighlights": 53
+  },
+  "falco": {
+    "materials": 78,
+    "withSpecular": 34,
+    "coloredOrDarkHighlights": 30
+  },
+  "ganondorf": {
+    "materials": 101,
+    "withSpecular": 19,
+    "coloredOrDarkHighlights": 17
+  }
+}

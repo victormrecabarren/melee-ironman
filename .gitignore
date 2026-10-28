@@ -20,3 +20,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/dist
+
+# Local game source and Blender intermediate files
+*.iso
+*.gcm
+*.blend
+*.blend1
+/tools/melee/.venv/
+__pycache__/
