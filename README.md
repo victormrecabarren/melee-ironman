@@ -22,6 +22,7 @@ The animated match tracker is the main page at `/`. Existing `/?animation-previe
 - Tap the winning character to remove one opponent stock. Each character starts with two stocks; losing both brings in the next character.
 - Hold a character to charge their forward smash, then release to strike. A winner taunts after taking a character's final stock while the next arrival continues independently.
 - Tap anywhere in the arena during an arrival or respawn platform wait to drop immediately. The full fall and landing still play; this tap never awards a stock.
+- Tap a player's name at the bottom of the arena to choose any character and one or two stocks. The icon-only picker follows that side's roster order, always listing two stocks before one. Selection preserves earned-stock history and plays an arrival for only the selected side. The match pauses while the picker is open; selecting the exhausted side can resume a completed match.
 - Both sides have live per-character stock totals with original stock icons identifying their defeated opponents.
 - The final roster stock triggers the original Game! overlay and announcer.
 - Matches, stats, and undo history save in this browser and resume after reload.

@@ -1,9 +1,41 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {initialLineup,takeStock,lineupFighters,CHARACTER_ROSTER} from './previewRoster.js';
+import {initialLineup,takeStock,lineupFighters,CHARACTER_ROSTER,characterChoices,selectCharacter,playerStockStats} from './previewRoster.js';
 import {previewFrame,resultTiming} from './animationTimeline.js';
 const manifest=JSON.parse(readFileSync(new URL('../public/melee-preview/manifest.json',import.meta.url)));
+test('each picker follows its own roster order with two stocks before one',()=>{
+ for(const side of [0,1]) {
+  const choices=characterChoices(side),order=side===0?CHARACTER_ROSTER:[...CHARACTER_ROSTER].reverse();
+  assert.equal(choices.length,52);
+  order.forEach((character,index)=>{
+   assert.deepEqual(choices.slice(index*2,index*2+2),[2,1].map(stocks=>({character,index,stocks})));
+  });
+ }
+ assert.deepEqual(characterChoices(0).slice(0,4).map(c=>c.character.slug),['dr-mario','dr-mario','mario','mario']);
+ assert.deepEqual(characterChoices(1).slice(0,4).map(c=>c.character.slug),['roy','roy','marth','marth']);
+});
+test('manual selection changes only that side, preserves earned stocks, and continues its roster',()=>{
+ for(const side of [0,1]) {
+  const before=takeStock(initialLineup(),side),beforeJSON=JSON.stringify(before);
+  const next=selectCharacter(before,side,1,1);
+  assert.deepEqual(next.players[1-side],before.players[1-side]);
+  assert.deepEqual(next.stockHistory,before.stockHistory);
+  assert.equal(playerStockStats(next,side).reduce((n,row)=>n+row.victims.length,0),1);
+  assert.equal(lineupFighters(next)[side],side===0?'mario':'marth-left');
+  assert.equal(takeStock(next,1-side).players[side].index,2);
+  assert.equal(takeStock(next,1-side).players[side].stocks,2);
+  assert.equal(JSON.stringify(before),beforeJSON);
+ }
+});
+test('selecting the exhausted side resumes a completed match without altering its opponent',()=>{
+ let finished=initialLineup();for(let i=0;i<52;i++)finished=takeStock(finished,0);
+ const next=selectCharacter(finished,1,0,2);
+ assert.equal(next.champion,null);
+ assert.deepEqual(next.players[0],finished.players[0]);
+ assert.deepEqual(next.stockHistory,finished.stockHistory);
+ assert.throws(()=>selectCharacter(finished,0,0,2),/defeated side/);
+});
 test('one tap removes one stock; the second advances only the defeated side',()=>{
  const start=initialLineup(),one=takeStock(start,0),two=takeStock(one,0);
  assert.deepEqual(start.players.map(p=>p.stocks),[2,2]);

@@ -1,5 +1,18 @@
 import roster from '../tools/melee/roster.json' with { type: 'json' };
 export const CHARACTER_ROSTER = roster;
+export function characterChoices(side) {
+  const ordered=side===0?roster:[...roster].reverse();
+  return ordered.flatMap((character,index)=>[2,1].map(stocks=>({character,index,stocks})));
+}
+export function selectCharacter(lineup,side,index,stocks) {
+  if(![0,1].includes(side) || !Number.isInteger(index) || index<0 || index>=roster.length || ![1,2].includes(stocks))
+    throw new Error('Invalid character selection');
+  // A completed match resumes by replacing its exhausted side; never silently
+  // restore stocks to the opponent as a side effect of a selection.
+  if(lineup.players[1-side].index>=roster.length)throw new Error('Select the defeated side first');
+  return withPlayedCharacters({...lineup,champion:null,
+    players:lineup.players.map((player,i)=>i===side?{index,stocks}:{...player})});
+}
 export const initialLineup = () => withPlayedCharacters({ players:[{index:0,stocks:2},{index:0,stocks:2}], champion:null, stockHistory:[], played:[[],[]] });
 export function lineupCharacter(lineup, side) {
   const index=lineup.players[side].index;

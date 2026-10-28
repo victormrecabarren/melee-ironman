@@ -5,10 +5,11 @@ import { companionPosition, fighterAssetKeys } from './previewCompanions.js';
 import { matchupHomes } from './combatSpacing.js';
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
+import CharacterPicker from './CharacterPicker.jsx';
 import {readPreviewSession, capturePreviewSession, restorePreviewPlayback, writePreviewSession, freshPreviewSession} from './previewSession.js';
 import { FIGHTERS, FLOOR, IMPACT_PARTICLE_SCALE, previewFrame, resultTiming, releasePlatform } from './animationTimeline.js';
 import { advanceAnimationClock, resetAnimationClock, animationFrameIndex } from './animationClock.js';
-import { CHARACTER_ROSTER, initialLineup, lineupCharacter, lineupFighters, takeStock, withPlayedCharacters, playerStockStats } from './previewRoster.js';
+import { CHARACTER_ROSTER, initialLineup, lineupCharacter, lineupFighters, takeStock, withPlayedCharacters, playerStockStats, selectCharacter } from './previewRoster.js';
 import { stageScale, FIGHTER_SCALE, VIEW, MOBILE_VIEW, fighterTarget } from './previewCamera.js';
 
 const BASE = `${import.meta.env.BASE_URL}melee-preview/`;
@@ -275,6 +276,7 @@ export default function App() {
   const [phase,setPhase]=useState('entrance');
   const [awaitingStart,setAwaitingStart]=useState(restored?Boolean(restored.playback.awaitingStart):true);
   const [adjusting,setAdjusting]=useState(false);
+  const [pickerSide,setPickerSide]=useState(null);
   const [canUndo,setCanUndo]=useState(Boolean(restored?.history.length));
   const busy=useRef(false);
   const heldInput=useRef(null);
@@ -387,6 +389,7 @@ export default function App() {
     function tick(now) {
       if(document.hidden) { clock.current.real=now; request=requestAnimationFrame(tick); return; }
       if (busy.current) { clock.current.real=now; request=requestAnimationFrame(tick); return; }
+      if (pickerSide!==null) { clock.current.real=now; request=requestAnimationFrame(tick); return; }
       // The title card covers the arena until the user starts. Avoid rendering
       // the frozen entrance effects behind it or consuming match time.
       if (!inspection && playback.current.awaitingStart) {
@@ -461,7 +464,7 @@ export default function App() {
     }
     request = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(request);
-  }, [assets, reduced, sound, inspection, inspectionFrame, inspectionScene, view, activeKeys, adjusting]);
+  }, [assets, reduced, sound, inspection, inspectionFrame, inspectionScene, view, activeKeys, adjusting, pickerSide]);
   useEffect(() => () => { audio.current?.context.close(); }, []);
   function unlockAudio() {
     if (!sound || reduced || !assets) return;
@@ -591,6 +594,29 @@ export default function App() {
     next.players[side]={index:side===0?index:CHARACTER_ROSTER.length-1-index,stocks};
     setSituation(next,'ready');
   }
+  function openCharacterPicker(side) {
+    if(!assets || busy.current || inspection)return;
+    cancelCharge();setError('');setPickerSide(side);
+  }
+  async function pickCharacter(index,stocks) {
+    if(pickerSide===null || busy.current)return;
+    const side=pickerSide,before=pendingLineup.current || lineupRef.current;
+    const next=selectCharacter(before,side,index,stocks),fighters=lineupFighters(next);
+    busy.current=true;setAdjusting(true);setError('');
+    try {
+      await loadFighterImages(assets,fighters);
+      history.current.push(before);setCanUndo(true);
+      lineupRef.current=next;pendingLineup.current=null;setLineup(next);
+      setActiveKeys(fighters);setHudStocks(next.players.map(p=>p.stocks));
+      const now=clock.current.time;
+      const idleSince=playback.current.idleSince || [now,now];
+      playback.current={mode:'respawn',winner:1-side,started:now,fighters,
+        stocks:next.players.map(p=>p.stocks),arrivals:[side===0,side===1],
+        idleSince:idleSince.map((time,i)=>i===side?now:Math.min(time,now))};
+      played.current.clear();setReady(false);setDropAvailable(false);setPhase('respawn');
+      retainFighterImages(assets,fighters);saveMatch();setPickerSide(null);
+    }catch(e){setError(e.message);}finally{busy.current=false;setAdjusting(false);}
+  }
   const names=activeKeys.map(key=>assets?.manifest.fighters[key]?.name || CHARACTER_ROSTER.find(c=>key.startsWith(c.slug))?.name || 'Fighter');
   return <main className="animation-preview">
     <header className="preview-header">
@@ -689,9 +715,15 @@ export default function App() {
         </div>
       </div>}
       <div className="preview-stock-counts" aria-live="polite">{names.map((name,side)=><span key={side}>{name}: {hudStocks[side]} {hudStocks[side]===1?'stock':'stocks'}</span>)}</div>
-      <div className="preview-ports"><span><i />P1 / {names[0]}</span><span>P2 / {names[1]}<i /></span></div>
+      <div className="preview-ports">{names.map((name,side)=><button key={side} className={`preview-port port-${side}`}
+        disabled={!assets || adjusting || inspection || (pendingLineup.current || lineup).champion===side}
+        aria-label={`Change Player ${side+1} character and stocks`} aria-haspopup="dialog" onClick={()=>openCharacterPicker(side)}>
+        <i /><span className="port-name">P{side+1} / {name}</span><span aria-hidden="true">⌄</span>
+      </button>)}</div>
     </section>
     <p className="match-helper" style={{visibility:awaitingStart?'hidden':'visible'}}>Tap stock winner</p>
+    {pickerSide!==null && assets && <CharacterPicker side={pickerSide} current={(pendingLineup.current || lineup).players[pickerSide]}
+      base={BASE} manifest={assets.manifest} busy={adjusting} error={error} onPick={pickCharacter} onClose={()=>setPickerSide(null)} />}
     <MatchStats lineup={lineup} assets={assets} />
     {error && <p role="alert">{error}</p>}
     {storageError && <p role="alert">{storageError}</p>}
