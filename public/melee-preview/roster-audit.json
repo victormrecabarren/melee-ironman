@@ -1,0 +1,742 @@
+{
+  "captain-falcon": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "captain-falcon-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "donkey-kong": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1017,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "donkey-kong-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1017,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "peach": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "peach-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "dr-mario": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016,
+      1042,
+      1059
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "dr-mario-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016,
+      1042,
+      1059
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "falco": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ganondorf": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      41
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "bowser": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1299
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "bowser-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1299
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "luigi": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "luigi-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "mario": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1041
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1041
+    ],
+    "unrenderedImpactElements": []
+  },
+  "mario-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1041
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1041
+    ],
+    "unrenderedImpactElements": []
+  },
+  "marth-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40,
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "yoshi": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "yoshi-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "roy": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40,
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "roy-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40,
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "falco-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "fox": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "fox-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ganondorf-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      41
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "kirby": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1059
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "kirby-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1059
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ice-climbers": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1031,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ice-climbers-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1031,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "samus": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "samus-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "nana": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1031,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "nana-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1031,
+      1299
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "link": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "link-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ness": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      19,
+      35
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "ness-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      19,
+      35
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "sheik": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "sheik-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "zelda": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1282
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1282
+    ],
+    "unrenderedImpactElements": []
+  },
+  "zelda-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1282
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1282
+    ],
+    "unrenderedImpactElements": []
+  },
+  "young-link": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "young-link-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "mr-game-and-watch": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      35
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "mr-game-and-watch-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [
+      35
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "marth": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1016
+    ],
+    "needsReview": [
+      40,
+      49
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "mewtwo": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1250,
+      1299
+    ],
+    "needsReview": [
+      41
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1250
+    ],
+    "unrenderedImpactElements": []
+  },
+  "mewtwo-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1250,
+      1299
+    ],
+    "needsReview": [
+      41
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1250
+    ],
+    "unrenderedImpactElements": []
+  },
+  "pichu": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023,
+      1042,
+      1220,
+      1221
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1220,
+      1221
+    ],
+    "unrenderedImpactElements": []
+  },
+  "pichu-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023,
+      1042,
+      1220,
+      1221
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1220,
+      1221
+    ],
+    "unrenderedImpactElements": []
+  },
+  "pikachu": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023,
+      1042,
+      1217,
+      1218
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1217,
+      1218
+    ],
+    "unrenderedImpactElements": []
+  },
+  "pikachu-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021,
+      1023,
+      1042,
+      1217,
+      1218
+    ],
+    "needsReview": [
+      40
+    ],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [
+      1217,
+      1218
+    ],
+    "unrenderedImpactElements": []
+  },
+  "jigglypuff": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  },
+  "jigglypuff-left": {
+    "assetErrors": [],
+    "gfx": [
+      1011,
+      1021
+    ],
+    "needsReview": [],
+    "status": "rendered; fidelity review separate",
+    "unrenderedGfx": [],
+    "unrenderedImpactElements": []
+  }
+}

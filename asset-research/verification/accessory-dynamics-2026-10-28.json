@@ -1,0 +1,288 @@
+{
+  "finding": "Missing post-animation accessory dynamics left hair/tie in authored animation or rest poses.",
+  "source": "ftData.x2C, ftCo_8009E4A8, lb_8001044C",
+  "renderedFrames": 1250,
+  "results": {
+    "bowser": {
+      "frames": 248,
+      "clips": {
+        "Wait1": {
+          "loopSeamDirectionRadians": 0.0443440418018003,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 200,
+          "maxDeviationRadians": 0.17442374750011555,
+          "bodyCollisions": 0
+        },
+        "Fall": {
+          "loopSeamDirectionRadians": 0.002277556786348892,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 15,
+          "maxDeviationRadians": 0.17114093186957924,
+          "bodyCollisions": 0
+        },
+        "Landing": {
+          "loopSeamDirectionRadians": 0.04899021708723614,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 0.17450956664503073,
+          "bodyCollisions": 0
+        },
+        "AttackS4": {
+          "loopSeamDirectionRadians": 0.11366101437354335,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 70,
+          "maxDeviationRadians": 0.1745636273106612,
+          "bodyCollisions": 0
+        },
+        "DamageN3": {
+          "loopSeamDirectionRadians": 0.17869960298436696,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 0.17466254545371215,
+          "bodyCollisions": 0
+        },
+        "DamageFlyN": {
+          "loopSeamDirectionRadians": 0.17453059308656366,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 40,
+          "maxDeviationRadians": 0.17496780094340728,
+          "bodyCollisions": 0
+        },
+        "DamageFlyRoll": {
+          "loopSeamDirectionRadians": 0.07662750677339134,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 20,
+          "maxDeviationRadians": 0.1734585041196189,
+          "bodyCollisions": 0
+        }
+      },
+      "decodedMiB": 42.59,
+      "assetErrors": []
+    },
+    "bowser-left": {
+      "frames": 248,
+      "clips": {
+        "Wait1": {
+          "loopSeamDirectionRadians": 0.0443440418018003,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 200,
+          "maxDeviationRadians": 0.17442374750011555,
+          "bodyCollisions": 0
+        },
+        "Fall": {
+          "loopSeamDirectionRadians": 0.002277556786348892,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 15,
+          "maxDeviationRadians": 0.17114093186957924,
+          "bodyCollisions": 0
+        },
+        "Landing": {
+          "loopSeamDirectionRadians": 0.04899021708723614,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 0.17450956664503073,
+          "bodyCollisions": 0
+        },
+        "AttackS4": {
+          "loopSeamDirectionRadians": 0.11366101437354335,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 70,
+          "maxDeviationRadians": 0.1745636273106612,
+          "bodyCollisions": 0
+        },
+        "DamageN3": {
+          "loopSeamDirectionRadians": 0.17869960298436696,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 0.17466254545371215,
+          "bodyCollisions": 0
+        },
+        "DamageFlyN": {
+          "loopSeamDirectionRadians": 0.17453059308656366,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 40,
+          "maxDeviationRadians": 0.17496780094340728,
+          "bodyCollisions": 0
+        },
+        "DamageFlyRoll": {
+          "loopSeamDirectionRadians": 0.07662750677339134,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 20,
+          "maxDeviationRadians": 0.1734585041196189,
+          "bodyCollisions": 0
+        }
+      },
+      "decodedMiB": 42.78,
+      "assetErrors": []
+    },
+    "donkey-kong": {
+      "frames": 377,
+      "clips": {
+        "Wait": {
+          "loopSeamDirectionRadians": 0.15207354345711677,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 506,
+          "maxDeviationRadians": 1.5091344719993498,
+          "bodyCollisions": 3
+        },
+        "Fall": {
+          "loopSeamDirectionRadians": 0.2650664286188116,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 16,
+          "maxDeviationRadians": 0.6457271043180959,
+          "bodyCollisions": 0
+        },
+        "Landing": {
+          "loopSeamDirectionRadians": 0.5882669782802635,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.3064744766513492,
+          "bodyCollisions": 0
+        },
+        "AttackS4S": {
+          "loopSeamDirectionRadians": 1.0544297282477098,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 55,
+          "maxDeviationRadians": 1.3121600774818039,
+          "bodyCollisions": 0
+        },
+        "DamageN3": {
+          "loopSeamDirectionRadians": 0.8137800571398964,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.0478031271120414,
+          "bodyCollisions": 0
+        },
+        "DamageFlyN": {
+          "loopSeamDirectionRadians": 0.8862190528507888,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.0503486000132907,
+          "bodyCollisions": 0
+        },
+        "DamageFlyRoll": {
+          "loopSeamDirectionRadians": 0.8276501966568479,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 16,
+          "maxDeviationRadians": 1.0484922468537075,
+          "bodyCollisions": 0
+        }
+      },
+      "decodedMiB": 40.59,
+      "assetErrors": []
+    },
+    "donkey-kong-left": {
+      "frames": 377,
+      "clips": {
+        "Wait": {
+          "loopSeamDirectionRadians": 0.15207354345711677,
+          "animatedPrefix": [
+            0
+          ],
+          "frames": 506,
+          "maxDeviationRadians": 1.5091344719993498,
+          "bodyCollisions": 3
+        },
+        "Fall": {
+          "loopSeamDirectionRadians": 0.2650664286188116,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 16,
+          "maxDeviationRadians": 0.6457271043180959,
+          "bodyCollisions": 0
+        },
+        "Landing": {
+          "loopSeamDirectionRadians": 0.5882669782802635,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.3064744766513492,
+          "bodyCollisions": 0
+        },
+        "AttackS4S": {
+          "loopSeamDirectionRadians": 1.0544297282477098,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 55,
+          "maxDeviationRadians": 1.3121600774818039,
+          "bodyCollisions": 0
+        },
+        "DamageN3": {
+          "loopSeamDirectionRadians": 0.8137800571398964,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.0478031271120414,
+          "bodyCollisions": 0
+        },
+        "DamageFlyN": {
+          "loopSeamDirectionRadians": 0.8862190528507888,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 30,
+          "maxDeviationRadians": 1.0503486000132907,
+          "bodyCollisions": 0
+        },
+        "DamageFlyRoll": {
+          "loopSeamDirectionRadians": 0.8276501966568479,
+          "animatedPrefix": [
+            1
+          ],
+          "frames": 16,
+          "maxDeviationRadians": 1.0484922468537075,
+          "bodyCollisions": 0
+        }
+      },
+      "decodedMiB": 40.8,
+      "assetErrors": []
+    }
+  },
+  "limitations": "Standalone baked clips; no cross-clip physics history or external force fields. Flat-floor collision adaptation."
+}

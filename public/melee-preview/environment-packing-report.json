@@ -1,0 +1,10 @@
+{
+  "arrival": {
+    "beforeMiB": 0.5,
+    "afterMiB": 0.64
+  },
+  "arrival-glow": {
+    "beforeMiB": 64.0,
+    "afterMiB": 8.7
+  }
+}

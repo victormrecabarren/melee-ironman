@@ -1,0 +1,32 @@
+[
+  {
+    "level": "debug",
+    "message": "Animation phase profile {\"phase\":\"entrance\",\"fighters\":[\"ness\",\"roy-left\"],\"frames\":9,\"drawP95ms\":80.4,\"intervalP95ms\":76.07,\"framesOver34ms\":1}",
+    "timestamp": "2026-10-28T09:10:18.080Z",
+    "url": "http://127.0.0.1:5173/src/AnimationPreview.jsx?t=1793178446223"
+  },
+  {
+    "level": "debug",
+    "message": "Animation phase profile {\"phase\":\"ready\",\"fighters\":[\"ness\",\"roy-left\"],\"frames\":9,\"drawP95ms\":0.3,\"intervalP95ms\":32.8,\"framesOver34ms\":0}",
+    "timestamp": "2026-10-28T09:10:18.181Z",
+    "url": "http://127.0.0.1:5173/src/AnimationPreview.jsx?t=1793178446223"
+  },
+  {
+    "level": "debug",
+    "message": "Animation phase profile {\"phase\":\"result\",\"fighters\":[\"ness\",\"roy-left\"],\"frames\":276,\"drawP95ms\":0.5,\"intervalP95ms\":9.8,\"framesOver34ms\":0}",
+    "timestamp": "2026-10-28T09:10:20.529Z",
+    "url": "http://127.0.0.1:5173/src/AnimationPreview.jsx?t=1793178446223"
+  },
+  {
+    "level": "debug",
+    "message": "KO playback profile {\"frames\":119,\"drawP95ms\":0.5,\"intervalP95ms\":9.9,\"framesOver34ms\":0}",
+    "timestamp": "2026-10-28T09:10:20.529Z",
+    "url": "http://127.0.0.1:5173/src/AnimationPreview.jsx?t=1793178446223"
+  },
+  {
+    "level": "debug",
+    "message": "Animation phase profile {\"phase\":\"respawn\",\"fighters\":[\"ness\",\"roy-left\"],\"frames\":242,\"drawP95ms\":0.5,\"intervalP95ms\":9.8,\"framesOver34ms\":1}",
+    "timestamp": "2026-10-28T09:10:22.570Z",
+    "url": "http://127.0.0.1:5173/src/AnimationPreview.jsx?t=1793178446223"
+  }
+]

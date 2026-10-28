@@ -1,0 +1,44 @@
+{
+  "purpose": "Visual validation of shared material correction, not pixel-accurate certification",
+  "references": [
+    {
+      "url": "https://www.ssbwiki.com/File:Donkey_Kong_Idle_Pose_SSBM.gif",
+      "observed": "Dark brown fur with warm directional shading. No large gray-white shoulder/forearm wash as in the old export. Pose broadly matches our idle; stage differs."
+    },
+    {
+      "url": "https://www.ssbwiki.com/File:SSBMWebsiteDonkeyKong1.jpg",
+      "observed": "Original Melee website screenshot: warm highlights on skin, dark fur on Jungle Japes."
+    },
+    {
+      "url": "https://www.ssbwiki.com/File:SSBMWebsiteDonkeyKong2.jpg",
+      "observed": "Original Melee website screenshot: fur stays brown on Temple, with white action streaks distinguished from material highlights."
+    },
+    {
+      "url": "https://www.ssbwiki.com/File:Samus_Idle_Pose_Melee.gif",
+      "observed": "Armor deliberately has bright local highlights, particularly shoulder and thigh. Do not disable specular globally. Our source-color correction retains colored highlights; placement/intensity still depends on the approximate light rig."
+    },
+    {
+      "url": "https://www.ssbwiki.com/File:Roy_Idle_Pose_Melee.gif",
+      "observed": "Blue tunic remains saturated; metal trim and sword retain lighter highlights. Our corrected material should not flatten these to matte."
+    }
+  ],
+  "limitations": [
+    "Different stage lighting, camera angle, GIF palette and capture resolution prevent a numerical pixel match.",
+    "Original textures, geometry, animation, material flags, highlight color and shininess are retained. Cycles/Principled remains an adaptation of GX rendering."
+  ],
+  "comparison": "dk-material-before-after.png",
+  "controls": "Before/after use identical model, textures, pose, lights, camera and Cycles settings. The material mapping alone changes.",
+  "verification": {
+    "installedFighterFacingEntries": 19,
+    "motionClipsChecked": 133,
+    "silhouetteReport": "material-silhouette-review.json",
+    "maxCentroidShiftPx": 0.683,
+    "notes": "Legacy Dr. Mario and Roy anchors cause subpixel differences. Roy\u2019s existing sword/afterimage edge contacts are retained; no new clipping was accepted. All installed entries use source-specular-v1.",
+    "checks": [
+      "4 material conversion tests passed",
+      "27 animation timeline / roster tests passed",
+      "production Vite build passed",
+      "mobile DK preview visually inspected"
+    ]
+  }
+}
