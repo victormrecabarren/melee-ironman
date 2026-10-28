@@ -6,7 +6,7 @@ import { matchupHomes } from './combatSpacing.js';
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import {readPreviewSession, capturePreviewSession, restorePreviewPlayback, writePreviewSession, freshPreviewSession} from './previewSession.js';
-import { FIGHTERS, FLOOR, IMPACT_PARTICLE_SCALE, previewFrame, resultTiming } from './animationTimeline.js';
+import { FIGHTERS, FLOOR, IMPACT_PARTICLE_SCALE, previewFrame, resultTiming, releasePlatform } from './animationTimeline.js';
 import { advanceAnimationClock, resetAnimationClock, animationFrameIndex } from './animationClock.js';
 import { CHARACTER_ROSTER, initialLineup, lineupCharacter, lineupFighters, takeStock, withPlayedCharacters, playerStockStats } from './previewRoster.js';
 import { stageScale, FIGHTER_SCALE, VIEW, MOBILE_VIEW, fighterTarget } from './previewCamera.js';
@@ -292,6 +292,7 @@ export default function App() {
   const [assets, setAssets] = useState(null);
   const [error, setError] = useState('');
   const [ready, setReady] = useState(false);
+  const [dropAvailable, setDropAvailable] = useState(false);
   const [status, setStatus] = useState('LOADING FIGHTERS');
   const [sound, setSound] = useState(restored?.sound ?? true);
   const [inspection, setInspection] = useState(false);
@@ -454,6 +455,7 @@ export default function App() {
         }
       }
       setReady(result.ready && !adjusting && lineupRef.current.champion===null);
+      setDropAvailable(result.platforms.length>0 && !reduced);
       setStatus(result.status);
       request = requestAnimationFrame(tick);
     }
@@ -481,6 +483,14 @@ export default function App() {
       playback.current={...playback.current,started:clock.current.time,awaitingStart:false};
       setAwaitingStart(false);played.current.clear();saveMatch();
     }finally{busy.current=false;setAdjusting(false);}
+  }
+  function dropFromPlatform() {
+    if (!assets || busy.current || inspection) return;
+    const released=releasePlatform(playback.current,clock.current.time,reduced);
+    if (!released) return;
+    playback.current=released;
+    setDropAvailable(false);
+    saveMatch();
   }
   async function setSituation(next, nextPhase='ready', saveUndo=true) {
     if(!assets || busy.current)return false;
@@ -664,6 +674,8 @@ export default function App() {
           onBlur={()=>{if(heldInput.current?.startsWith('key-'))cancelCharge();}}
           onClick={event=>{if(!heldInput.current && (event.detail===0 || !assets?.manifest.fighters[activeKeys[side]].move.charge))win(side);}} />;
       })}
+      {dropAvailable && !awaitingStart && !inspection && !adjusting && <button
+        className="preview-drop-target" aria-label="Drop from platform now" onClick={dropFromPlatform} />}
       {!assets && !awaitingStart && <div className="preview-loading">{error || 'Preparing the fighters…'}</div>}
       {awaitingStart && !inspection && <div className="match-title-card">
         <img className="match-title-symbol" src={`${BASE}title-symbol.webp`} alt="" draggable="false" />

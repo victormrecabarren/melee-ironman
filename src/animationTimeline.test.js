@@ -3,10 +3,53 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { previewFrame, resultTiming, FLOOR, SPAWN_Y, LAUNCH_TIME, FIGHTERS,
-  ENTRANCE_HOLD, FALL_TIME, PARTICLE_SCALE, IMPACT_PARTICLE_SCALE, damageModelOffset } from './animationTimeline.js';
+  ENTRANCE_HOLD, FALL_TIME, PARTICLE_SCALE, IMPACT_PARTICLE_SCALE, damageModelOffset, releasePlatform } from './animationTimeline.js';
 import { matchupHomes } from './combatSpacing.js';
 const manifest = JSON.parse(readFileSync(new URL('../public/melee-preview/manifest.json', import.meta.url)));
 const HOME=matchupHomes(manifest,FIGHTERS);
+
+test('tapping the initial platforms starts a complete fall and brings GO forward',()=>{
+  const state={mode:'entrance',started:1000,fighters:FIGHTERS,stocks:[2,2],matchStart:true};
+  const released=releasePlatform(state,1200);
+  assert.equal(released.started,state.started,'do not jump the animation clock');
+  assert.equal(released.platformHoldSeconds,.2);
+  const start=previewFrame(released,1200,manifest);
+  assert.equal(start.platforms.length,0);
+  assert.ok(start.positions.every(p=>p.clip==='fall' && Math.abs(p.y-SPAWN_Y)<.001));
+  assert.ok(start.gameGo && Math.abs(start.gameGo.age)<1e-8);
+  assert.equal(start.effects.some(e=>e.kind==='arrival-glow'),false);
+  assert.equal(start.ready,false);
+  const mid=previewFrame(released,1450,manifest);
+  assert.ok(mid.positions.every(p=>p.y>SPAWN_Y && p.y<FLOOR));
+  const landed=previewFrame(released,1701,manifest);
+  assert.ok(landed.positions.every(p=>p.clip==='landing'));
+  assert.equal(landed.effects.filter(e=>e.kind==='landing-dust').length,2);
+  assert.deepEqual(landed.stocks,[2,2]);
+  assert.equal(releasePlatform(released,1200),null,'repeated taps cannot skip the fall');
+});
+
+for(const winner of [0,1]) for(const fresh of [false,true]) {
+  test(`early P${2-winner} ${fresh?'arrival':'revival'} preserves survivor taunt and stock counts`,()=>{
+    const state={mode:'respawn',winner,started:1000,fighters:FIGHTERS,stocks:[2,2],tauntStarted:900,
+      arrivals:winner===0?[false,fresh]:[fresh,false]};
+    const released=releasePlatform(state,1300);
+    const actual=previewFrame(released,1400,manifest),original=previewFrame(state,1400,manifest);
+    assert.deepEqual(actual.positions[winner],original.positions[winner]);
+    assert.deepEqual(actual.camera,original.camera);
+    assert.equal(actual.positions[1-winner].clip,'fall');
+    assert.equal(actual.platforms.length,0);
+    assert.deepEqual(actual.stocks,state.stocks);
+    assert.equal(actual.positions[1-winner].overlay!==undefined,!fresh);
+  });
+}
+
+test('early drop is unavailable on the title card, after the wait, during a KO, or with reduced motion',()=>{
+  const state={mode:'entrance',started:0};
+  assert.equal(releasePlatform({...state,awaitingStart:true},200),null);
+  assert.equal(releasePlatform(state,ENTRANCE_HOLD*1000),null);
+  assert.equal(releasePlatform({...state,mode:'result'},200),null);
+  assert.equal(releasePlatform(state,200,true),null);
+});
 
 for (const winner of [0, 1]) {
   test(`P${winner + 1}: result-to-respawn paints both fighters and preserves survivor idle`, () => {

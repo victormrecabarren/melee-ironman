@@ -1,4 +1,5 @@
 import {CHARACTER_ROSTER, initialLineup, lineupFighters} from './previewRoster.js';
+import {ENTRANCE_HOLD} from './animationTimeline.js';
 
 export const PREVIEW_SESSION_KEY='melee-ironman:animation-session:v1';
 const slugs=new Set(CHARACTER_ROSTER.map(c=>c.slug));
@@ -24,6 +25,7 @@ export function parsePreviewSession(raw) {
     (p.chargeFrames!==undefined && (!Number.isInteger(p.chargeFrames) || p.chargeFrames<0 || p.chargeFrames>60)) ||
     (p.celebrate!==undefined && typeof p.celebrate!=='boolean') ||
     (p.tauntStarted!==undefined && (p.mode!=='respawn' || !Number.isFinite(p.tauntStarted))) ||
+    (p.platformHoldSeconds!==undefined && (!['entrance','respawn'].includes(p.mode) || !Number.isFinite(p.platformHoldSeconds) || p.platformHoldSeconds<0 || p.platformHoldSeconds>ENTRANCE_HOLD)) ||
     (p.arrivals!==undefined && (!pair(p.arrivals) || !p.arrivals.every(value=>typeof value==='boolean'))) ||
     (p.matchStart!==undefined && typeof p.matchStart!=='boolean') ||
     (p.awaitingStart!==undefined && (typeof p.awaitingStart!=='boolean' || (p.awaitingStart && (p.mode!=='entrance' || !p.matchStart)))) ||

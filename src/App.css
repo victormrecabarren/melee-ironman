@@ -43,6 +43,8 @@
 
 .preview-fighter-target { position:absolute; appearance:none; -webkit-appearance:none; border:0; border-radius:0; background:transparent; box-shadow:none; padding:0; cursor:pointer; touch-action:none; user-select:none; -webkit-touch-callout:none; -webkit-tap-highlight-color:transparent; }
 .preview-fighter-target:disabled { pointer-events:none; }
+.preview-drop-target { position:absolute; inset:0; width:100%; height:100%; appearance:none; -webkit-appearance:none; border:0; border-radius:0; padding:0; background:transparent; box-shadow:none; touch-action:manipulation; }
+.preview-drop-target:hover, .preview-drop-target:active:not(:disabled) { background:transparent; box-shadow:none; transform:none; }
 .preview-fighter-target:focus-visible { outline:2px solid #d5b680; outline-offset:0; }
 .preview-fighter-target:hover, .preview-fighter-target:active:not(:disabled) { background:transparent; box-shadow:none; transform:none; }
 .preview-status, .preview-ports { pointer-events:none; }

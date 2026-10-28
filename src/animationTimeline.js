@@ -11,6 +11,14 @@ const clamp = x => Math.max(0, Math.min(1, x));
 export const LAUNCH_TIME = .9;
 export const ENTRANCE_HOLD = 1.05;
 export const FALL_TIME = .5;
+// Shorten only the platform wait, leaving the shared clock and any overlapping
+// survivor taunt untouched. A second tap after release has no effect.
+export function releasePlatform(state, now, reduced = false) {
+  if (reduced || state.awaitingStart || !['entrance', 'respawn'].includes(state.mode)) return null;
+  const elapsed = Math.max(0, (now-state.started)/1000);
+  if (elapsed >= (state.platformHoldSeconds ?? ENTRANCE_HOLD)) return null;
+  return {...state, platformHoldSeconds: elapsed};
+}
 // Requested preview pacing: retain the original cycle, halve its duration.
 export const POST_DROP_DURATION_SCALE = .5;
 // Particle exports have 5 px/game-unit, versus 17.28 world px/game-unit
@@ -147,7 +155,7 @@ export function previewFrame(state, now, manifest, reduced = false, view) {
   }
   if(state.awaitingStart){composed.ready=false;composed.status='';composed.sounds=[];}
   else if(state.mode==='entrance' && state.matchStart){
-    const go=manifest.environment['game-go'],age=elapsed-(reduced?0:ENTRANCE_HOLD);
+    const go=manifest.environment['game-go'],age=elapsed-(reduced?0:(state.platformHoldSeconds ?? ENTRANCE_HOLD));
     if(go && age>=0 && age<go.frames/go.fps){
       composed.gameGo={age:reduced?10/60:age};composed.status='';
       if(age>=go.announcerDelayFrames/go.fps)composed.sounds.push({id:'go-announcer',name:'go-announcer'});
@@ -356,7 +364,7 @@ function worldFrame(state, now, manifest, reduced = false) {
     return frame;
   }
   const entrants = state.mode === 'entrance' ? [0, 1] : [1-state.winner];
-  const hold = reduced ? 0 : ENTRANCE_HOLD, fall = reduced ? 0 : FALL_TIME;
+  const hold = reduced ? 0 : (state.platformHoldSeconds ?? ENTRANCE_HOLD), fall = reduced ? 0 : FALL_TIME;
   for (const side of entrants) {
     const p = positions[side], landingAt = hold+fall;
     // Two stocks identifies fresh/manual entrances in older saved sessions.

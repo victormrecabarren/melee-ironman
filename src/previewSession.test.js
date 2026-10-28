@@ -3,9 +3,19 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {initialLineup,takeStock,lineupFighters,withPlayedCharacters} from './previewRoster.js';
 import {capturePreviewSession,parsePreviewSession,restorePreviewPlayback,readPreviewSession,writePreviewSession,PREVIEW_SESSION_KEY} from './previewSession.js';
-import {previewFrame,resultTiming} from './animationTimeline.js';
+import {previewFrame,resultTiming,releasePlatform} from './animationTimeline.js';
 const manifest=JSON.parse(readFileSync(new URL('../public/melee-preview/manifest.json',import.meta.url)));
 const storage=()=>{const values=new Map();return {getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v)};};
+test('early drop survives a reload without restarting the platform wait',()=>{
+ const state={mode:'entrance',started:1000,fighters:lineupFighters(initialLineup()),stocks:[2,2],matchStart:true};
+ const released=releasePlatform(state,1200);
+ const saved=parsePreviewSession(JSON.stringify(snapshot({playback:released,now:1400})));
+ const restored=restorePreviewPlayback(saved,80000);
+ assert.deepEqual(previewFrame(restored,80000,manifest),previewFrame(released,1400,manifest));
+ for(const invalid of [-1,1.06,null,'0.2']) {
+  assert.throws(()=>parsePreviewSession(JSON.stringify({...saved,playback:{...saved.playback,platformHoldSeconds:invalid}})));
+ }
+});
 function snapshot(overrides={}) {
  const lineup=initialLineup();
  return capturePreviewSession({lineup,pending:null,history:[],playback:{mode:'entrance',started:1000,fighters:lineupFighters(lineup),stocks:[2,2],idleSince:[500,1000]},now:5000,playedSounds:new Set(['land-0']),sound:false,reduced:false,...overrides});
